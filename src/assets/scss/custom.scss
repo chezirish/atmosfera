@@ -1,0 +1,266 @@
+.mobile-menu .menu .is-active > a {
+    background: rgba(0, 0, 0, .2);
+}
+
+.entry-title {
+    display: none;
+}
+
+.header-logo {
+    margin: 30px 0 30px 0;
+}
+
+.header-text {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+.section-info {
+    background: url('../images/header_background.png');
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-info .footer-phone {
+    margin-top: 30px;
+}
+
+.info-time {
+    margin-bottom: 30px;
+}
+
+.info-form {
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.title-form {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.info-form .header-form input {
+    background: transparent;
+}
+
+.info-form .header-form .button {
+    background: #bd3849;
+}
+
+.info-form .header-form .button:hover {
+    opacity: 0.8;
+}
+
+.header-form input {
+    color: #fff;
+}
+
+.text-form {
+    display: block;
+    width: auto;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #bbbbbb;
+    margin-top: 15px;
+}
+
+.section-info .orbit-container img {
+    width: 116px;
+    height: 120px;
+    display: block;
+}
+
+
+.slider-text {
+    margin-top: 2em;
+    margin-left: 1em;
+    color: #bbbbbb;
+}
+
+.section-info .orbit-bullets {
+    margin-top: 3rem;
+}
+
+///////////////////////////// shares /////////////////////////////
+
+.section-title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 95%;
+    max-width: 936px;
+    margin: 30px auto 40px;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+}
+
+.section-title span {
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+
+.section-title::before {
+    content: '';
+    display: block;
+    background-color: #902a37;
+    height: 1px;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    background-color: #902a37;
+    height: 1px;
+    width: 100%;
+}
+
+.shares-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.carousel {
+    height: 50rem;
+}
+
+.next-arrow, .previos-arrow {
+    position: absolute;
+}
+
+.next-arrow {
+    position: absolute;
+    right: 15px;
+    padding-top: 60px;
+}
+
+.previos-arrow {
+    position: absolute;
+    left: 15px;
+    padding-top: 60px;
+}
+
+.shares .orbit-image {
+    width: auto;
+}
+
+///////////////////////////// footer /////////////////////////////
+
+.footer {
+    background: #232323;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-container {
+    margin:  rem-calc(60) 0 0 0;   
+    max-width: 100%; 
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info a {
+    text-decoration: underline;
+}
+
+.footer-info li {
+    border-right: 1px solid #fff;
+}
+
+.footer .footer-info a {
+    padding: 0.1rem 1rem;
+}
+
+.footer .footer-info li:last-child {
+    border-right: none;
+}
+
+.footer-nav-bar {
+    margin: 0 auto;
+    max-width: 600px;
+    // margin-bottom: 1rem;
+}
+
+.footer-nav-bar li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-nav-bar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .footer-info p {
+    margin-bottom: 0;
+}
+
+.footer .logo img {
+    display: block;
+    margin: 0 auto; 
+}
+
+.footer-phone  {
+    margin-bottom: 0;
+}
+
+.social-icons li {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.social-icons li a {
+    color: #fff;
+}
+
+.social-icons li a svg {
+    fill: #fff;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.fa-phone {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.phone {
+    padding-right: 5px;
+    color: #8cd43d;
+}
+
+
+.address {
+    padding-right: 5px;
+    padding-left: 13px;
+    color: #bd394a;
+}

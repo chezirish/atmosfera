@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
 
+
 window.$ = $;
 
 import Foundation from 'foundation-sites';
@@ -8,4 +9,10 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 
+
 $(document).foundation();
+
+import './lib/custom';
+import './lib/fontawesome-all.min';
+import './lib/slick.min';
+

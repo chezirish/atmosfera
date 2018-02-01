@@ -64,6 +64,7 @@
 @import 'util/util';
 @import 'global/colors';
 
+
 // 1. Global
 // ---------
 
@@ -519,7 +520,8 @@ $maincontent-class: 'off-canvas-content';
 // ---------
 
 $orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
+// $orbit-bullet-background-active: $dark-gray;
+$orbit-bullet-background-active: #2f94a4;
 $orbit-bullet-diameter: 1.2rem;
 $orbit-bullet-margin: 0.1rem;
 $orbit-bullet-margin-top: 0.8rem;
@@ -848,8 +850,10 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: $dark-nav-color;
-$topbar-submenu-background: $topbar-background;
+// $topbar-background: $dark-nav-color;
+$topbar-background: #bd3849;
+// $topbar-submenu-background: $topbar-background;
+$topbar-submenu-background: rgb(189, 56, 73);
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
