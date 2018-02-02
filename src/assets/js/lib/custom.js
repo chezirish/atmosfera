@@ -1,5 +1,3 @@
-
-
 $(function() {
     var headerNav = document.getElementById("header-nav");
     
@@ -29,6 +27,31 @@ $(function() {
         prevArrow: $('.previos-arrow')
     });
 
+
+    var nextArrow = document.getElementsByClassName('next-arrow')[0];
+    var previosArrow = document.getElementsByClassName('previos-arrow')[0];
+
+    nextArrow.addEventListener('mouseover', function(e){
+        var arr = e.target.src.split('.');
+        e.target.src = arr[0] + '2.png';
+    });
+
+    nextArrow.addEventListener('mouseout', function(e){
+        var arr = e.target.src.split('.');
+        e.target.src = arr[0].slice(0, -1) + '.png';
+    });
+    
+    
+    previosArrow.addEventListener('mouseover', function(e){
+        var arr = e.target.src.split('.');
+        e.target.src = arr[0] + '1.png';
+    });
+
+    previosArrow.addEventListener('mouseout', function(e){
+        var arr = e.target.src.split('.');
+        e.target.src = arr[0].slice(0, -1) + '.png';
+    });
+    
 
 
 

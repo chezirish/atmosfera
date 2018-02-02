@@ -100,28 +100,37 @@ get_header(); ?>
     </div>
     <div class="shares-wrapper">
         <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
-        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2.png" alt="arrow">
+        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
         <div class="carousel">
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
-            </div>
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
+            </div>            
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
-            </div>
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
+            </div>            
             <div class="slick-item">
+                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
-            </div>
-            <div class="slick-item">
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
         </div>
     </div>
