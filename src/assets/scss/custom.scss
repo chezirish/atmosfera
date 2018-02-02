@@ -20,7 +20,6 @@
     background: url('../images/header_background.png');
     color: #fff;
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 .section-info .footer-phone {
@@ -76,7 +75,6 @@
     display: block;
 }
 
-
 .slider-text {
     margin-top: 2em;
     margin-left: 1em;
@@ -104,7 +102,7 @@
     align-items: center;
     width: 95%;
     max-width: 936px;
-    margin: 30px auto 40px;
+    margin: 60px auto 40px;
     text-align: center;
     position: relative;
     text-align: center;
@@ -137,10 +135,6 @@
 .shares-wrapper {
     max-width: 75rem;
     margin: 0 auto;
-}
-
-.carousel {
-    height: 50rem;
 }
 
 .next-arrow, .previos-arrow {
@@ -214,6 +208,128 @@
 .shares .orbit-image {
     width: auto;
 }
+
+///////////////////////////// services /////////////////////////////
+
+.services-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.grid img {
+    width: 100%;
+}
+
+// .grid-item {
+//     float: left;
+// }
+
+.grid-item { 
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+.grid-item img { 
+    width: 240px;
+    height: 240px;
+}
+
+.grid-item--width2 { 
+    width: 480px; 
+    height: 480px; 
+}
+
+.grid-item--width2 img { 
+    width: 480px; 
+    height: 480px; 
+}
+
+
+.height-auto img {
+    height: 240px;
+}
+
+.height-auto {
+    height: 240px;
+}
+
+.name-service {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 5px 10px;
+    padding-right: 0;
+    background: #bd3849;
+    color: #fff; 
+}
+
+.name-service:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -37px;
+    top: 0;
+    border: 17.5px solid transparent;
+    border-left: 19.5px solid #bd3849;
+}
+
+.modal {
+    position: absolute;    
+    display: none;  
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    -webkit-box-shadow: inset -1px -1px 300px 200px rgba(0,0,0,0.33);
+    -moz-box-shadow: inset -1px -1px 300px 200px rgba(0,0,0,0.33);
+    box-shadow: inset -1px -1px 300px 200px rgba(0,0,0,0.33);
+}
+
+.modal p {
+    color: #fff;
+    position: absolute;
+    bottom: 25%;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+}
+
+.modal .modal-title {
+    width: auto;
+    display: block;
+    top: 30%;
+    bottom: auto;
+    font-size: 1.2em;
+    border-bottom: 2px solid #2f94a4;
+    border-top: 2px solid #2f94a4;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+// .modal-title:after {
+//     content: '';
+//     margin: 0 auto;
+//     display: block;
+//     height: 2px;
+//     width: 50%;
+//     background-color: #2f94a4;
+//     margin-top: 5px;
+// }
+
+// .modal-title:before {
+//     content: '';
+//     margin: 0 auto;
+//     display: block;
+//     height: 2px;
+//     width: 50%;
+//     background-color: #2f94a4;
+//     margin-bottom: 5px;
+// }
+
+
+
 
 ///////////////////////////// footer /////////////////////////////
 

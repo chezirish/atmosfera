@@ -15,4 +15,6 @@ $(document).foundation();
 import './lib/custom';
 import './lib/fontawesome-all.min';
 import './lib/slick.min';
+import './lib/masonry.pkgd.min';
+import './lib/imagesloaded.pkgd.min';
 

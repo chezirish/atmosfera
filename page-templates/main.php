@@ -136,5 +136,76 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="services">
+    <div class="section-title">
+        <span>Галерея услуг</span>
+    </div>
+    <div class="services-wrapper">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item grid-item--width2">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/1.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/4.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/3.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+            <div class="grid-item">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/5.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+            <div class="grid-item height-auto">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/6.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+            <div class="grid-item height-auto last-block grid-item--width2">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/2.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <?php get_footer();

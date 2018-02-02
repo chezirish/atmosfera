@@ -28,31 +28,55 @@ $(function() {
     });
 
 
+
+
     var nextArrow = document.getElementsByClassName('next-arrow')[0];
     var previosArrow = document.getElementsByClassName('previos-arrow')[0];
 
     nextArrow.addEventListener('mouseover', function(e){
-        var arr = e.target.src.split('.');
-        e.target.src = arr[0] + '2.png';
+        var string = e.target.src.slice(0, -4);
+        e.target.src = string + '2.png';
     });
 
     nextArrow.addEventListener('mouseout', function(e){
-        var arr = e.target.src.split('.');
-        e.target.src = arr[0].slice(0, -1) + '.png';
+        var string = e.target.src.slice(0, -5);
+        e.target.src = string + '.png';
     });
     
     
     previosArrow.addEventListener('mouseover', function(e){
-        var arr = e.target.src.split('.');
-        e.target.src = arr[0] + '1.png';
+        var string = e.target.src.slice(0, -4); 
+        e.target.src = string + '1.png';
     });
 
     previosArrow.addEventListener('mouseout', function(e){
-        var arr = e.target.src.split('.');
-        e.target.src = arr[0].slice(0, -1) + '.png';
+        var string = e.target.src.slice(0, -5);
+        e.target.src = string + '.png';
     });
     
 
+    
+
+    var $grid = $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 240
+      });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });
+
+
+
+
+    $(".grid-item").mouseover(function(){
+        $(this).find( ".modal" ).css('display', 'block');
+    });
+
+    $(".grid-item").mouseout(function(){
+        $(this).find( ".modal" ).css('display', 'none');
+    });
 
 
 })
