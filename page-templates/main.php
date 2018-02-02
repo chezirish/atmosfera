@@ -101,7 +101,7 @@ get_header(); ?>
     <div class="shares-wrapper">
         <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
         <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
-        <div class="carousel">
+        <div class="shares-carousel">
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
@@ -204,8 +204,61 @@ get_header(); ?>
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
         </div>
+        <div class="services-button">
+            <a href="#" class="button">СМОТРЕСТЬ ВСЕ УСЛУГИ</a>
+        </div>
     </div>
 </section>
 
+<section class="reviews">
+    <div class="section-title">
+        <span>отзывы клиентов</span>
+    </div>
+        <div class="reviews-wrapper">
+            <img class="next-arrow1" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
+            <img class="previos-arrow2" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+            <div class="reviews-carousel">
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+                <div class="reviews-carousel-item">
+                    <h3>Имя</h3>
+                    <div class="review">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-button">
+                <a href="#" class="button visited">СМОТРЕСТЬ ВСЕ УСЛУГИ</a>
+            </div>
+        </div>
+</section>
 
 <?php get_footer();

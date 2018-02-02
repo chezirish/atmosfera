@@ -20,12 +20,20 @@ $(function() {
 
 
 
-    $('.carousel').slick({
+    $('.shares-carousel').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: $('.next-arrow'),
         prevArrow: $('.previos-arrow')
     });
+
+    $('.reviews-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: $('.next-arrow1'),
+        prevArrow: $('.previos-arrow2')
+    });
+
 
 
 
@@ -53,7 +61,40 @@ $(function() {
         var string = e.target.src.slice(0, -5);
         e.target.src = string + '.png';
     });
+
+
+
     
+    var nextArrow1 = document.getElementsByClassName('next-arrow1')[0];
+    var previosArrow2 = document.getElementsByClassName('previos-arrow2')[0];
+
+    nextArrow1.addEventListener('mouseover', function(e){
+        var string = e.target.src.slice(0, -4);
+        e.target.src = string + '2.png';
+    });
+
+    nextArrow1.addEventListener('mouseout', function(e){
+        var string = e.target.src.slice(0, -5);
+        e.target.src = string + '.png';
+    });
+    
+    
+    previosArrow2.addEventListener('mouseover', function(e){
+        var string = e.target.src.slice(0, -4); 
+        e.target.src = string + '1.png';
+    });
+
+    previosArrow2.addEventListener('mouseout', function(e){
+        var string = e.target.src.slice(0, -5);
+        e.target.src = string + '.png';
+    });
+    
+
+
+
+
+
+
 
     
 
