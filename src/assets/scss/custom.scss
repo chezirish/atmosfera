@@ -8,6 +8,7 @@
 
 .header-logo {
     margin: 30px 0 30px 0;
+    width: 80%;
 }
 
 .header-text {
@@ -17,7 +18,7 @@
 }
 
 .section-info {
-    background: url('../images/header_background.png');
+    background: url('../images/header_background.png') 26%;
     color: #fff;
     text-align: center;
     min-height: 600px;
@@ -138,28 +139,18 @@
     margin: 0 auto;
 }
 
-.next-arrow {
+.shares-wrapper .slick-item img {
+    width: 100%;
+}
+
+.next-arrow, .next-arrow2, .next-arrow3 {
     position: absolute;
     right: 15px;
     padding-top: 60px;
     z-index: 2;
 }
 
-.previos-arrow {
-    position: absolute;
-    left: 15px;
-    z-index: 2;
-    padding-top: 60px;
-}
-
-.next-arrow1 {
-    position: absolute;
-    right: 15px;
-    z-index: 2;
-    padding-top: 60px;
-}
-
-.previos-arrow2 {
+.previos-arrow, .previos-arrow2, .previos-arrow3 {
     position: absolute;
     left: 15px;
     z-index: 2;
@@ -186,6 +177,7 @@
     position: absolute;
     bottom: 0;
     padding: 1rem;
+    z-index: 3;
 }
 
 .slick-item a {
@@ -375,6 +367,7 @@
 .reviews-button {
     text-align: center;
     margin-top: 2em;
+    margin-bottom: 3rem;
 }
 
 .reviews-button a {
@@ -390,7 +383,165 @@
     background: #902A37;
 }
 
+///////////////////////////// feedback /////////////////////////////
 
+.feedback {
+    margin-bottom: 5rem;
+}
+
+.feedback h3 {
+    text-align: center;
+}
+
+.feedback-wrapper {
+    margin: 0 auto;
+    background: url('../images/img/contact-form-bg.jpg');
+    background-size: cover;
+}
+
+.feedback-wrapper form {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+
+
+.feedback-wrapper .button {
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+.feedback-wrapper .button:hover {
+    color: #902a37;
+    background-color: #fff;
+}
+
+.feedback-wrapper input {
+    background: transparent;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.16);
+    border: none;
+}
+
+.feedback-wrapper input:focus {
+    background: transparent;
+}
+
+.form-feedback-wrapper {
+    width: 80%;
+}
+
+.feedback h3 {
+    margin-bottom: 2rem;
+}
+
+.masters-text {
+    width: 60%;
+    padding-left: 1rem;
+}
+
+.masters-text h4 {
+    font-weight: 500;    
+}
+
+.our-masters .masters-title {
+    font-size: 1.3em;
+    font-weight: normal;
+    opacity: 1;
+}
+
+.masters-text p {
+    opacity: 0.7;
+}
+
+
+
+///////////////////////////// masters /////////////////////////////
+
+.masters-wrapper-wrapper {
+    background: url('../images/images/kkk.png') 100% no-repeat #f3f3f3;
+    padding-top: 2rem;
+
+}
+
+.masters-wrapper {
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.masters-slick-item {
+    position: relative;
+}
+
+.our-masters {
+    margin-bottom: 5rem;
+}
+
+
+.our-masters h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.reviews-wrapper {
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+.masters-button {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.masters-button a {
+    width: 11rem;
+}
+
+
+.masters-button a:hover {
+    opacity: 0.9;
+    background: #902A37;
+}
+
+.single-master {
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.single-master img {
+    margin-right: 1.9rem;
+    width: 183px;
+}
+
+.masters-list .single-master-last img {
+    margin: 0;
+}
+
+.masters-list-imges {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+///////////////////////////// seo text /////////////////////////////
+
+.seo-text {
+    padding-bottom: 2rem;
+}
+
+.seo-text h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.seo-text p {
+    padding: 0 4rem;
+}
 
 
 ///////////////////////////// footer /////////////////////////////
@@ -402,7 +553,7 @@
 }
 
 .footer-container {
-    margin:  rem-calc(60) 0 0 0;   
+    margin:  0;  
     max-width: 100%; 
 }
 
@@ -493,4 +644,72 @@
     padding-right: 5px;
     padding-left: 13px;
     color: #bd394a;
+}
+
+
+
+
+@media screen and (max-width: 39.9375em) {
+    .form-feedback-wrapper {
+        width: 100%;
+    }
+    .master-img {
+        margin: 0 auto;
+    }
+
+    .master-img-wrapper{
+        float: none !important;
+    }   
+
+    .masters-text {
+        width: 100%;
+        text-align: center;
+        float: none !important;
+    }
+
+    .masters-button {
+        text-align: center;
+        position: static;        
+    }
+}
+
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .master-img {
+        margin: 0 auto;
+    }  
+    .master-img-wrapper{
+        float: none !important;
+    }   
+
+    .masters-text {
+        width: 100%;
+        text-align: center;
+        float: none !important;        
+    }
+
+    .masters-button {
+        text-align: center;
+        position: static;        
+    }
+}
+
+
+
+@media screen and (min-width: 94em) {
+    .next-arrow, .next-arrow2, .next-arrow3 {
+        position: absolute;
+        right: initial;
+        left: 1420px;
+        padding-top: 60px;
+        z-index: 2;
+    }
+    
+    .previos-arrow, .previos-arrow2, .previos-arrow3 {
+        position: absolute;
+        left: initial;
+        right: 1420px;
+        z-index: 2;
+        padding-top: 60px;
+    }
 }

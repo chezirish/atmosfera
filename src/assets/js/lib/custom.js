@@ -24,71 +24,106 @@ $(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: $('.next-arrow'),
-        prevArrow: $('.previos-arrow')
+        prevArrow: $('.previos-arrow'),
+        // mobileFirst: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                // centerMode: true,
+                // centerPadding: '40px',
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 700,
+              settings: {
+                // centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
     });
 
     $('.reviews-carousel').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        nextArrow: $('.next-arrow1'),
-        prevArrow: $('.previos-arrow2')
+        nextArrow: $('.next-arrow2'),
+        prevArrow: $('.previos-arrow2'),
+        // mobileFirst: true,
+        responsive: [
+            {
+              breakpoint: 790,
+              settings: {
+                // centerMode: true,
+                // centerPadding: '40px',
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 550,
+              settings: {
+                // centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+              }
+            }
+          ]
+    });
+
+    $('.masters-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // mobileFirst: true,
+        appendDots: $('.single-master'),
+        // dots: true,
+        nextArrow: $('.next-arrow3'),
+        prevArrow: $('.previos-arrow3')
+    });
+
+
+
+    $(".single-master").click(function(e){
+        var slideIndex = $(this).index();
+        $( '.masters-carousel' ).slick( "slickGoTo", parseInt(slideIndex) );
     });
 
 
 
 
-
-    var nextArrow = document.getElementsByClassName('next-arrow')[0];
-    var previosArrow = document.getElementsByClassName('previos-arrow')[0];
-
-    nextArrow.addEventListener('mouseover', function(e){
-        var string = e.target.src.slice(0, -4);
-        e.target.src = string + '2.png';
-    });
-
-    nextArrow.addEventListener('mouseout', function(e){
-        var string = e.target.src.slice(0, -5);
-        e.target.src = string + '.png';
-    });
+    function sliderArrows(nextArrow, prevArrow) {
+        var nextArrow = document.getElementsByClassName(nextArrow)[0];
+        var previosArrow = document.getElementsByClassName(prevArrow)[0];
     
+        nextArrow.addEventListener('mouseover', function(e){
+            var string = e.target.src.slice(0, -4);
+            e.target.src = string + '2.png';
+        });
     
-    previosArrow.addEventListener('mouseover', function(e){
-        var string = e.target.src.slice(0, -4); 
-        e.target.src = string + '1.png';
-    });
-
-    previosArrow.addEventListener('mouseout', function(e){
-        var string = e.target.src.slice(0, -5);
-        e.target.src = string + '.png';
-    });
-
-
-
+        nextArrow.addEventListener('mouseout', function(e){
+            var string = e.target.src.slice(0, -5);
+            e.target.src = string + '.png';
+        });
+        
+        
+        previosArrow.addEventListener('mouseover', function(e){
+            var string = e.target.src.slice(0, -4); 
+            e.target.src = string + '1.png';
+        });
     
-    var nextArrow1 = document.getElementsByClassName('next-arrow1')[0];
-    var previosArrow2 = document.getElementsByClassName('previos-arrow2')[0];
+        previosArrow.addEventListener('mouseout', function(e){
+            var string = e.target.src.slice(0, -5);
+            e.target.src = string + '.png';
+        });
+    }
 
-    nextArrow1.addEventListener('mouseover', function(e){
-        var string = e.target.src.slice(0, -4);
-        e.target.src = string + '2.png';
-    });
+    sliderArrows('next-arrow', 'previos-arrow');
+    sliderArrows('next-arrow2', 'previos-arrow2');
+    sliderArrows('next-arrow3', 'previos-arrow3');
+   
 
-    nextArrow1.addEventListener('mouseout', function(e){
-        var string = e.target.src.slice(0, -5);
-        e.target.src = string + '.png';
-    });
-    
-    
-    previosArrow2.addEventListener('mouseover', function(e){
-        var string = e.target.src.slice(0, -4); 
-        e.target.src = string + '1.png';
-    });
 
-    previosArrow2.addEventListener('mouseout', function(e){
-        var string = e.target.src.slice(0, -5);
-        e.target.src = string + '.png';
-    });
-    
 
 
 

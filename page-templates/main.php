@@ -215,7 +215,7 @@ get_header(); ?>
         <span>отзывы клиентов</span>
     </div>
         <div class="reviews-wrapper">
-            <img class="next-arrow1" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
+            <img class="next-arrow2" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
             <img class="previos-arrow2" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
             <div class="reviews-carousel">
                 <div class="reviews-carousel-item">
@@ -256,9 +256,149 @@ get_header(); ?>
                 </div>
             </div>
             <div class="reviews-button">
-                <a href="#" class="button visited">СМОТРЕСТЬ ВСЕ УСЛУГИ</a>
+                <a href="#" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
             </div>
         </div>
+</section>
+
+<section class="feedback">
+    <h3>ЕСЛИ ЕСТЬ ВОПРОСЫ, ПОЖЕЛАНИЯ К НАШЕЙ РАБОТЕ</h3>
+    <div class="feedback-wrapper clearfix">
+        <div class="form-feedback-wrapper float-right">
+            <form class="">
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                    <div class="medium-4 cell">
+                        <input type="text" placeholder="Ваше имя">
+                    </div>
+                    <div class="medium-4 cell">
+                        <input type="text" placeholder="Телефон">
+                    </div>
+                    <div class="medium-4 cell">
+                        <input type="text" placeholder="Email (не обязательно)">
+                    </div>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                    <div class="medium-8 cell">
+                        <input type="text" placeholder="Введите сообщение">
+                    </div>
+                    <div class="medium-4 cell">
+                        <input type="submit" class="button" value="Отправить сообщение">
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </div>
+</section>
+
+<section class="our-masters">
+    <h3>МЫ ГОРДИМСЯ НАШИМИ МАСТЕРАМИ И ИХ РАБОТАМИ:</h3>
+        <div class="masters-wrapper-wrapper">
+            <div class="masters-wrapper">
+                <img class="next-arrow3" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
+                <img class="previos-arrow3" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+                <div class="masters-carousel">
+                    <div class="masters-slick-item clearfix">
+                            <div class="float-left master-img-wrapper">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_1.jpg" alt="women">
+                            </div>
+                            <div class="masters-text float-left">
+                                <h4>Имя Фамилия</h4>
+                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
+                            </div>
+                        <div class="masters-button">
+                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                    <div class="masters-slick-item clearfix">
+                            <div class="float-left master-img-wrapper">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_2.jpg" alt="women">
+                            </div>
+                            <div class="masters-text float-left">
+                                <h4>Имя Фамилия</h4>
+                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
+                            </div>
+                        <div class="masters-button">
+                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                    <div class="masters-slick-item clearfix">
+                            <div class="float-left master-img-wrapper">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_3.jpg" alt="women">
+                            </div>
+                            <div class="masters-text float-left">
+                                <h4>Имя Фамилия</h4>
+                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
+                            </div>
+                        <div class="masters-button">
+                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                    <div class="masters-slick-item clearfix">
+                            <div class="float-left master-img-wrapper">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_4.jpg" alt="women">
+                            </div>
+                            <div class="masters-text float-left">
+                                <h4>Имя Фамилия</h4>
+                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
+                            </div>
+                        <div class="masters-button">
+                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                    <div class="masters-slick-item clearfix">
+                            <div class="float-left master-img-wrapper">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_5.jpg" alt="women">
+                            </div>
+                            <div class="masters-text float-left">
+                                <h4>Имя Фамилия</h4>
+                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
+                            </div>
+                        <div class="masters-button">
+                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+            <div class="masters-list">
+                <p class="masters-list-title">Наши мастера</p>
+                <div class="masters-list-imges">
+                    <div class="single-master">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_1.jpg" alt="women">
+                    </div>
+                    <div class="single-master">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_2.jpg" alt="women">
+                    </div>
+                    <div class="single-master">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_3.jpg" alt="women">
+                    </div>
+                    <div class="single-master">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_4.jpg" alt="women">
+                    </div>
+                    <div class="single-master single-master-last">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_5.jpg" alt="women">
+                    </div>
+                </div>
+            </div> 
+            </div>
+        </div>
+</section>
+
+<section class="seo-text">
+    <h1>ЗАГОЛОВОК SEO-текста</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facilis, ex eius corrupti libero nisi ratione. Quisquam harum aspernatur maxime numquam, iste magni incidunt, cum sequi animi doloribus soluta iure inventore ipsa, fugit voluptatum exercitationem molestias illo sapiente. Qui ipsum iusto, amet excepturi non sapiente placeat deleniti, dolores nisi consequatur nesciunt voluptatem nostrum assumenda dolor accusantium pariatur voluptate? Inventore, dolor quia nemo eius reiciendis, libero ipsa sunt impedit, velit dolore cumque perspiciatis ut veritatis totam reprehenderit! Eius exercitationem neque quos reprehenderit! Voluptas, eum nisi. Blanditiis laborum, labore repellat tempora reprehenderit non! Dolor dolore ex facilis repudiandae omnis consectetur eos dolorem.</p>
+</section>
+
+
+<section class="maps">
+    <?php the_field('map'); ?>
 </section>
 
 <?php get_footer();
