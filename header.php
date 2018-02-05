@@ -29,7 +29,7 @@
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">
 					<!-- <a href="<?php // echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php // bloginfo( 'name' ); ?></a> -->
-					<span>menu</span>
+					<span>Атмосфера</span>
 				</span>
 			<!-- </div> -->
 		</div>
@@ -49,7 +49,19 @@
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
 					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
 				<?php endif; ?>
+				<a href="#" class="button top-bar-button-sign">Запись онлайн</a>
 			</div>
 		</nav>
+
+		<?php if( !is_front_page() ) : ?>
+
+			<section class="contacts__title">
+				<div class="contacts__title-wrapper clearfix">
+					<img class="float-left" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="logo">
+					<h2 class="float-right"> <?php wp_title('');  ?> </h2>
+				</div>
+			</section>
+
+		<?php endif; ?>
 
 	</header>
