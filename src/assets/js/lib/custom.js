@@ -29,6 +29,19 @@ $(function() {
         });
     }
 
+    
+
+    if( $('.gift-sertificates-carousel') ){
+        $('.gift-sertificates-carousel').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1
+            // dots: true,
+            // nextArrow: $('.next-arrow'),
+            // prevArrow: $('.previos-arrow'),
+            // mobileFirst: true,
+        });
+    }
+
 
 
     if( $('.licences-carousel') ){

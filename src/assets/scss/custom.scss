@@ -806,9 +806,122 @@ html body .licence__content, .previos-arrow, .next-arrow {
 }
 
 
+//___________________________ gift-sertificates page ___________________________//
 
+.gift-sertificates {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
 
+.gift-sertificates h3 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
 
+.gift-sertificates .info-form {
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 0;
+}
+
+.gift-sertificates .header-form input {
+    color: black;
+}
+
+.gift-sertificates .header-form .button {
+    color: #fff
+}
+
+.gift-sertificates .text-form {
+    color: black
+}
+
+.gift-sertificates .slick-slide img {
+    margin: 0 auto;
+}
+
+//___________________________ services page ___________________________//
+
+.services__content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    // position: relative;
+    // background:  url('../images/images/kkk.png') no-repeat;
+}
+
+.services__content .services-items a {
+    color: black;
+}
+
+.accordion-menu-container{
+    border-bottom: 1px solid #902A37;
+}
+
+.services-items {
+    margin-bottom: 2rem;
+}
+
+.services__conten-wrapper {
+    display: flex;
+}
+
+.services__service-info {
+    padding-left: 1rem;
+}
+
+.services__service-img {
+    flex-grow: 1;
+    flex-basis: 60rem;
+}
+
+.services__service-info {
+    flex-grow: 2;
+}
+
+.services__service-info h3 {
+    padding: 0;
+}
+
+.services__content td:nth-child(even) {
+    text-align: right;
+}
+
+.services__content td:nth-child(odd) {
+    text-align: left;
+}
+
+.price-list-title {
+    padding-left: 0;
+}
+
+.services__button a {
+    background: #902A37;
+    margin: 0;
+    margin-right: 10px;    
+}
+
+.services__button a:hover {
+    opacity: 0.9;
+    background: #902A37;
+}
+
+.services__content .section-title {
+    margin-top: 40px;
+}
+
+.salon-img {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    position: absolute;
+    top: 60rem;
+    left: 0;
+}
 
 
 //___________________________ breakpoints ___________________________//
@@ -868,6 +981,14 @@ html body .licence__content, .previos-arrow, .next-arrow {
 
     .requisites-content {
         width: auto;
+    }
+
+    .services__conten-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .services__service-info {
+        padding-left: 0;
     }
 }
 
