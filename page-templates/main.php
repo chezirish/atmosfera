@@ -7,7 +7,7 @@ get_header(); ?>
 <section class="section-info">
     <div class="row">
         <div class="medium-4 large-4 columns">   
-            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/logo.png" alt="">
+            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt="">
 
             <div class="orbit clearfix" data-auto-play="false" role="region" data-orbit>
                 <div class="orbit-wrapper">
@@ -21,7 +21,7 @@ get_header(); ?>
                         <div class="header-text">
                             <p>Высший уровень <br>Вашего преображения</p>
                         </div>
-                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/im.png">
+                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/im.png">
                         <div class="slider-text float-left">
                             <p>Только лучшие бренды <br> косметики экстра - класса</p>
                         </div>
@@ -32,7 +32,7 @@ get_header(); ?>
                         <div class="header-text">
                             <p>Высший уровень <br>Вашего преображения</p>
                         </div>
-                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/im.png">
+                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/im.png">
                         <div class="slider-text float-left">
                             <p>Только лучшие бренды <br> косметики экстра - класса</p>
                         </div>
@@ -43,7 +43,7 @@ get_header(); ?>
                         <div class="header-text">
                             <p>Высший уровень <br>Вашего преображения</p>
                         </div>
-                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/im.png">
+                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/im.png">
                         <div class="slider-text float-left">
                             <p>Только лучшие бренды <br> косметики экстра - класса</p>
                         </div>
@@ -54,7 +54,7 @@ get_header(); ?>
                         <div class="header-text">
                             <p>Высший уровень <br>Вашего преображения</p>
                         </div>
-                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/im.png">
+                        <img class="float-left" src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/im.png">
                         <div class="slider-text float-left">
                             <p>Только лучшие бренды <br> косметики экстра - класса</p>
                         </div>
@@ -81,7 +81,7 @@ get_header(); ?>
                 </ul>
             </div>
             <div class="info-form">
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/line.png" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/line.png" alt="line">
                 <p class="title-form">оставьте заявку</p>
                 <form class="header-form" action="">
                     <input type="text" placeholder="Имя">
@@ -99,37 +99,37 @@ get_header(); ?>
         <span>наши акции</span>
     </div>
     <div class="shares-wrapper">
-        <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
-        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+        <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
+        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
         <div class="shares-carousel">
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>            
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>            
             <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/images/sl_viz3.jpg" alt="line">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
             </div>
         </div>
@@ -150,7 +150,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/1.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/1.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
             <div class="grid-item">
@@ -160,7 +160,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/4.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/4.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
             <div class="grid-item">
@@ -170,7 +170,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/3.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/3.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
             <div class="grid-item">
@@ -180,7 +180,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/5.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/5.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
             <div class="grid-item height-auto">
@@ -190,7 +190,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/6.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/6.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
             <div class="grid-item height-auto last-block grid-item--width2">
@@ -200,7 +200,7 @@ get_header(); ?>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/src/assets/images/img/gallery/2.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/2.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
         </div>
@@ -215,8 +215,8 @@ get_header(); ?>
         <span>отзывы клиентов</span>
     </div>
         <div class="reviews-wrapper">
-            <img class="next-arrow2" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
-            <img class="previos-arrow2" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+            <img class="next-arrow2" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
+            <img class="previos-arrow2" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
             <div class="reviews-carousel">
                 <div class="reviews-carousel-item">
                     <h3>Имя</h3>
@@ -298,12 +298,12 @@ get_header(); ?>
     <h3>МЫ ГОРДИМСЯ НАШИМИ МАСТЕРАМИ И ИХ РАБОТАМИ:</h3>
         <div class="masters-wrapper-wrapper">
             <div class="masters-wrapper">
-                <img class="next-arrow3" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
-                <img class="previos-arrow3" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+                <img class="next-arrow3" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
+                <img class="previos-arrow3" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
                 <div class="masters-carousel">
                     <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_1.jpg" alt="women">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
                             </div>
                             <div class="masters-text float-left">
                                 <h4>Имя Фамилия</h4>
@@ -316,7 +316,7 @@ get_header(); ?>
                     </div>
                     <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_2.jpg" alt="women">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_2.jpg" alt="women">
                             </div>
                             <div class="masters-text float-left">
                                 <h4>Имя Фамилия</h4>
@@ -329,7 +329,7 @@ get_header(); ?>
                     </div>
                     <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_3.jpg" alt="women">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_3.jpg" alt="women">
                             </div>
                             <div class="masters-text float-left">
                                 <h4>Имя Фамилия</h4>
@@ -342,7 +342,7 @@ get_header(); ?>
                     </div>
                     <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_4.jpg" alt="women">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_4.jpg" alt="women">
                             </div>
                             <div class="masters-text float-left">
                                 <h4>Имя Фамилия</h4>
@@ -355,7 +355,7 @@ get_header(); ?>
                     </div>
                     <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_5.jpg" alt="women">
+                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_5.jpg" alt="women">
                             </div>
                             <div class="masters-text float-left">
                                 <h4>Имя Фамилия</h4>
@@ -371,19 +371,19 @@ get_header(); ?>
                 <p class="masters-list-title">Наши мастера</p>
                 <div class="masters-list-imges">
                     <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_1.jpg" alt="women">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
                     </div>
                     <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_2.jpg" alt="women">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_2.jpg" alt="women">
                     </div>
                     <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_3.jpg" alt="women">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_3.jpg" alt="women">
                     </div>
                     <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_4.jpg" alt="women">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_4.jpg" alt="women">
                     </div>
                     <div class="single-master single-master-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/mas_5.jpg" alt="women">
+                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_5.jpg" alt="women">
                     </div>
                 </div>
             </div> 

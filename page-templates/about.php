@@ -14,23 +14,23 @@ get_header(); ?>
 <section class="gallery">
     <h2>ГАЛЕРЕЯ САЛОНА</h2>
     <div class="gallery-wrapper">
-        <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/1_1.png" alt="arrow">
-        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/src/assets/images/images/2_2.png" alt="arrow">
+        <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
+        <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
         <div class="gallery-carousel">
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/about/ofice-photo.png" alt="салон">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about/ofice-photo.png" alt="салон">
             </div>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/about/s1.png" alt="салон">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about/s1.png" alt="салон">
             </div>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/about/s2.png" alt="салон">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about/s2.png" alt="салон">
             </div>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/about/s3.png" alt="салон">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about/s3.png" alt="салон">
             </div>
             <div>
-                <img src="<?php echo get_template_directory_uri(); ?>/src/assets/images/about/s4.png" alt="салон">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/about/s4.png" alt="салон">
             </div>
         </div>
     </div>
