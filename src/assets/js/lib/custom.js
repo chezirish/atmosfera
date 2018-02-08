@@ -18,6 +18,30 @@ $(function() {
     });
     
 
+    
+    
+
+    if( $('.articles-carousel') ){
+        $('.articles-carousel').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            dots: false,
+            nextArrow: $('.next-arrow'),
+            prevArrow: $('.previos-arrow'),
+            // mobileFirst: true,
+            responsive: [
+                {
+                breakpoint: 800,
+                settings: {
+                    // centerMode: true,
+                    // centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+        });
+    }
+
     if( $('.gallery-carousel') ){
         $('.gallery-carousel').slick({
             slidesToShow: 1,

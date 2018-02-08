@@ -923,6 +923,151 @@ html body .licence__content, .previos-arrow, .next-arrow {
     left: 0;
 }
 
+//___________________________ shares page ___________________________//
+
+.shares__content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+
+.shares__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shares__wrapper .shares-block:nth-child(odd) {
+    margin-right: 2rem;
+}
+
+.shares-block {
+    // width: 400px;
+    flex-basis: 450px;
+    margin-bottom: 2rem;
+}
+
+.shares-block img {
+    width: 100%;
+}
+
+//___________________________ masters page ___________________________//
+
+.masters__content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    background: url('../images/logo.png')
+}
+
+.masters__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.master {
+    width: 330px;
+    text-align: center;
+    margin-bottom: 3rem;
+    flex-basis: 330px;
+}
+
+.master h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.52);
+}
+
+.master p {
+    color: rgba(0, 0, 0, 0.52);
+}
+
+
+//___________________________ master single page ___________________________//
+
+.masters-single__content {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.masters-single__content h5 {
+    font-weight: 500;
+}
+
+.masters-single__content p {
+    color: rgba(0,0,0,0.50);
+}
+
+//___________________________ articles page ___________________________//
+
+.articles__content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.articles__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.article {
+    max-width: 450px;
+}
+
+.article .shares-block {
+    margin-bottom: 0;
+}
+
+.articles__link {
+    text-align: right;
+}
+
+//___________________________ sindle article page ___________________________//
+
+.article-info {
+    width: 100%;
+}
+
+.article-preview {
+    height: 15rem;
+    overflow: hidden;
+    background: url(../images/images/sl_viz2.jpg) 0 100% no-repeat;
+    background-size: cover;
+}
+
+
+.article-info h4 {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.also {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.also h3 {
+    text-align: center;
+}
+
+
+.article-info img {
+    width: 100%;
+}
+
+.also .article-item {
+    padding: 0 80px;
+    
+}
+
+.also .previos-arrow {
+    padding-top: 60px;
+}
+
+
 
 //___________________________ breakpoints ___________________________//
 
@@ -990,6 +1135,27 @@ html body .licence__content, .previos-arrow, .next-arrow {
     .services__service-info {
         padding-left: 0;
     }
+
+
+    .shares__wrapper .shares-block:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .masters__wrapper {
+        justify-content: center;
+    }
+
+    .masters-single__content {
+        text-align: center;
+    }
+
+    .articles__wrapper {
+        justify-content: center;
+    }
+
+    .article-info p {
+        padding: 0 2rem;
+    }
 }
 
 
@@ -1018,6 +1184,22 @@ html body .licence__content, .previos-arrow, .next-arrow {
 
     .requisites-content {
         width: auto;
+    }
+
+    .shares__wrapper .shares-block:nth-child(odd) {
+        margin-right: 0;
+    }
+
+    .masters-single__content {
+        text-align: center;
+    }
+
+    .articles__wrapper {
+        justify-content: center;
+    }
+
+    .article-info p {
+        padding: 0 2rem;
     }
 }
 
