@@ -7,7 +7,7 @@ get_header(); ?>
 <section class="section-info">
     <div class="row">
         <div class="medium-4 large-4 columns">   
-            <img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt="">
+        <a href="/atmosfera"><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt=""></a>
 
             <div class="orbit clearfix" data-auto-play="false" role="region" data-orbit>
                 <div class="orbit-wrapper">

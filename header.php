@@ -57,7 +57,7 @@
 
 			<section class="contacts__title">
 				<div class="contacts__title-wrapper clearfix">
-					<img class="float-left" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt="logo">
+					<a href="/atmosfera"><img class="float-left" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt="logo"></a>
 					<h2 class="float-right"> <?php wp_title('');  ?> </h2>
 				</div>
 			</section>
