@@ -1,6 +1,0 @@
-записть онлайн хедер
-header mobule menu color
-links visited blue
-forms field require
-feedback form change background on mobile
-прозрачность текста

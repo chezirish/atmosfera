@@ -28,8 +28,8 @@
 			<!-- <div class="title-bar-left"> -->
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
 				<span class="site-mobile-title title-bar-title">
-					<!-- <a href="<?php // echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php // bloginfo( 'name' ); ?></a> -->
-					<span>Атмосфера</span>
+					<p><a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php  bloginfo( 'name' ); ?></a></p>
+					<!-- <span>Атмосфера</span> -->
 				</span>
 			<!-- </div> -->
 		</div>
@@ -61,6 +61,15 @@
 					<h2 class="float-right"> <?php wp_title('');  ?> </h2>
 				</div>
 			</section>
+
+			<nav aria-label="You are here:" role="navigation">
+			<ul class="breadcrumbs">
+				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Главная</a></li>
+				<li>
+				<span class="show-for-sr">Current: </span><?php wp_title('');  ?>
+				</li>
+			</ul>
+			</nav>
 
 		<?php endif; ?>
 

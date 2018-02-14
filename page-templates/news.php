@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Статьи
+Template Name: Новости
 */
 get_header(); ?>
 
@@ -59,6 +59,16 @@ get_header(); ?>
 
 
 
+        <!-- <div class="article">
+            <div class="slick-item shares-block">
+                <p>25.06.2018</p>
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz2.jpg" alt="line">
+                <p class="slick-link-wrapper"><a class="slick-link" href="../single-article/">Подробнее</a></p>
+            </div>
+            <h5>Поступление новых средств по уходу за волосами </h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor optio ab debitis deserunt vel illo voluptate necessitatibus ullam architecto soluta.</p>
+            <p class="articles__link"><a  href="#">Читать далее</a></p>
+        </div>  -->
   
         <?php
             
@@ -66,7 +76,7 @@ get_header(); ?>
             $args = array(
 
                 'paged' => $ourCurrentPage,
-                'post_type' => 'article-post' );
+                'post_type' => 'new-post' );
             $postslist = new WP_Query( $args );
 
             if ( $postslist->have_posts() ) :
@@ -98,8 +108,6 @@ get_header(); ?>
 
             endif;
         ?>
-
-        
 
     </div>
 </section>
