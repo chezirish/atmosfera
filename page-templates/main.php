@@ -71,8 +71,8 @@ get_header(); ?>
             </div>
         </div>
         <div class="medium-5 large-4 columns">
-            <p class="footer-phone"><span class="phone"><i class="fa fa-phone" aria-hidden="true"></i></span>8 812 717 0037 <span class="address"><i class="fas fa-map-marker"></i></span>Невский пр., 166</p>
-            <p class="info-time"><span class="address"><i class="far fa-clock"></i></span> c 10:00 до 22:00, без выходных</p>
+            <p class="footer-phone"><span class="phone"><i class="fa fa-phone" aria-hidden="true"></i></span><?php the_field('phone', get_option( 'page_on_front' ));  ?> <span class="address"><i class="fas fa-map-marker"></i></span><?php the_field('address', get_option( 'page_on_front' ));  ?></p>
+            <p class="info-time"><span class="address"><i class="far fa-clock"></i></span><?php the_field('time', get_option( 'page_on_front' ));  ?></p>
             <div class="social-icons">
                 <ul class="menu align-center">
                     <li><a href="#"><i class="fab fa-vk"></i></a></li>
@@ -102,36 +102,43 @@ get_header(); ?>
         <img class="next-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
         <img class="previos-arrow" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
         <div class="shares-carousel">
-            <div class="slick-item">
+            <!-- <div class="slick-item">
                 <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
                 <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>
-            <div class="slick-item">
-                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
-                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>
-            <div class="slick-item">
-                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
-                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>
-            <div class="slick-item">
-                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
-                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>            
-            <div class="slick-item">
-                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
-                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>            
-            <div class="slick-item">
-                <p class="slick-text">Визаж <span class="slick-span">-10%</span></p>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/images/sl_viz3.jpg" alt="line">
-                <p class="slick-link-wrapper"><a class="slick-link" href="#">Подробнее</a></p>
-            </div>
+            </div> -->
+
+
+            <?php
+            
+            $ourCurrentPage = get_query_var('paged');
+            $args = array(
+
+                'paged' => $ourCurrentPage,
+                'post_type' => 'shares-post' );
+            $postslist = new WP_Query( $args );
+
+            if ( $postslist->have_posts() ) :
+                while ( $postslist->have_posts() ) : $postslist->the_post();
+                
+                    $imageContent = get_the_content();
+                    $stripped = strip_tags($imageContent, '<p>');
+                    
+                     ?>
+
+
+                        <div class="slick-item">
+                            <p class="slick-text"><?php the_field('title'); ?>  <span class="slick-span"><?php the_field('red-span'); ?></span></p>
+                            <?php the_post_thumbnail('', array('class' => "",)) ?>
+                            <p class="slick-link-wrapper"><a class="slick-link" href="<?php the_permalink(); ?>">Подробнее</a></p>
+                        </div>
+
+                    <?php
+
+                endwhile;
+            endif;
+            ?>
+
         </div>
     </div>
 </section>
@@ -218,42 +225,47 @@ get_header(); ?>
             <img class="next-arrow2" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
             <img class="previos-arrow2" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
             <div class="reviews-carousel">
-                <div class="reviews-carousel-item">
+                <!-- <div class="reviews-carousel-item">
                     <h3>Имя</h3>
                     <div class="review">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
                     </div>
-                </div>
-                <div class="reviews-carousel-item">
-                    <h3>Имя</h3>
-                    <div class="review">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
-                    </div>
-                </div>
-                <div class="reviews-carousel-item">
-                    <h3>Имя</h3>
-                    <div class="review">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
-                    </div>
-                </div>
-                <div class="reviews-carousel-item">
-                    <h3>Имя</h3>
-                    <div class="review">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
-                    </div>
-                </div>
-                <div class="reviews-carousel-item">
-                    <h3>Имя</h3>
-                    <div class="review">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
-                    </div>
-                </div>
-                <div class="reviews-carousel-item">
-                    <h3>Имя</h3>
-                    <div class="review">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui porro sunt et eum iste atque, rerum nostrum ex itaque quod?</p>
-                    </div>
-                </div>
+                </div> -->
+
+
+                <?php
+            
+            $ourCurrentPage = get_query_var('paged');
+            $args = array(
+
+                'paged' => $ourCurrentPage,
+                'post_type' => 'otziv-post' );
+            $postslist = new WP_Query( $args );
+
+            if ( $postslist->have_posts() ) :
+                while ( $postslist->have_posts() ) : $postslist->the_post();
+                
+
+            
+                    
+                     ?>
+
+                        
+                        <div class="reviews-carousel-item">
+                            <h3><?php the_title(); ?></h3>
+                            <div class="review">
+                                <?php  the_excerpt(); ?>
+                            </div>
+                        </div>
+               
+                        
+
+                    <?php
+
+                endwhile;
+            endif;
+            ?>
+
             </div>
             <div class="reviews-button">
                 <a href="#" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
@@ -392,13 +404,13 @@ get_header(); ?>
 </section>
 
 <section class="seo-text">
-    <h1>ЗАГОЛОВОК SEO-текста</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facilis, ex eius corrupti libero nisi ratione. Quisquam harum aspernatur maxime numquam, iste magni incidunt, cum sequi animi doloribus soluta iure inventore ipsa, fugit voluptatum exercitationem molestias illo sapiente. Qui ipsum iusto, amet excepturi non sapiente placeat deleniti, dolores nisi consequatur nesciunt voluptatem nostrum assumenda dolor accusantium pariatur voluptate? Inventore, dolor quia nemo eius reiciendis, libero ipsa sunt impedit, velit dolore cumque perspiciatis ut veritatis totam reprehenderit! Eius exercitationem neque quos reprehenderit! Voluptas, eum nisi. Blanditiis laborum, labore repellat tempora reprehenderit non! Dolor dolore ex facilis repudiandae omnis consectetur eos dolorem.</p>
+    <h1><?php the_field('seo-title', get_option( 'page_on_front' ))  ?></h1>
+    <p><?php the_field('seo-content', get_option( 'page_on_front' ))  ?></p>
 </section>
 
 
 <section class="maps">
-    <?php the_field('map'); ?>
+    <?php the_field('map', get_option( 'page_on_front' ))  ?>
 </section>
 
 <?php get_footer();
