@@ -31,13 +31,13 @@ get_header(); ?>
                     
                      ?>
 
-
+                        
                         <div class="master">
-                        <?php the_post_thumbnail('', array('class' => "",)) ?>
+                        <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('', array('class' => "",)) ?> </a>
                             <h2><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <div class="services__button">
-                                <a href="<?php the_permalink(); ?>" class="button">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+                                <a href="#" class="button">ЗАПИСАТЬСЯ ОНЛАЙН</a>
                             </div>
                         </div>
                         

@@ -57,7 +57,6 @@ $pages = get_pages(array(
 <section class="seo-text">
     <h1> <?php the_field('seo-title', $shares ) ?></h1>
     <p><?php the_field('seo-content', $shares ) ?></p>
-
 </section>
 
 <?php get_footer();

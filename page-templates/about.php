@@ -55,6 +55,7 @@ get_header(); ?>
                         </div>
                         </div>
                     </div>
+                    <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
                 </form>
             </div>        
         </div>

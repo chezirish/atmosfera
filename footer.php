@@ -26,9 +26,9 @@
                 <p class="footer-address"><span class="address"><i class="fas fa-map-marker"></i></span><?php the_field('address', get_option( 'page_on_front' ));  ?></p>
                 <div class="social-icons">
                     <ul class="menu align-center">
-                        <li><a href="#"><i class="fab fa-vk"></i></a></li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="<?php the_field('vk-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-vk"></i></a></li>
+                        <li><a target="_blank" href="<?php the_field('fb-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="<?php the_field('inst-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>   
             </div>

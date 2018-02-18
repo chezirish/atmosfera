@@ -34,6 +34,7 @@ get_header(); ?>
                     <input type="submit" class="button" value="ЗАПИСАТЬСЯ">
                 </form>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
+                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
             </div>     
         </div>
     </div>

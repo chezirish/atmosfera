@@ -12,12 +12,13 @@ register_nav_menus(
 		'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
 		'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
 		'footer-nav' => 'footer nav',
+		'services-nav' => 'Услуги меню',
 	)
 );
 
 
 /**
- * Desktop navigation - footer nav bar
+ * footer nav bar
  *
  * 
  */
@@ -29,6 +30,26 @@ if ( ! function_exists( 'footer_nav_bar' ) ) {
 				'menu_class'     => 'dropdown menu align-center',
 				'items_wrap'     => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
 				'theme_location' => 'footer-nav',
+				'depth'          => 0,
+				'fallback_cb'    => false,
+			)
+		);
+	}
+}
+
+/**
+ * service nav bar
+ *
+ * 
+ */
+if ( ! function_exists( 'service_nav_bar' ) ) {
+	function service_nav_bar() {
+		wp_nav_menu(
+			array(
+				'container'      => false,
+				'menu_class'     => 'vertical menu accordion-menu custom-style',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu>%3$s</ul>',
+				'theme_location' => 'services-nav',
 				'depth'          => 0,
 				'fallback_cb'    => false,
 			)

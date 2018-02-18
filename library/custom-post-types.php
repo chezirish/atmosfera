@@ -18,6 +18,18 @@ register_post_type( 'shares-post',
 			'supports'             => array('title', 'editor', 'thumbnail')
     )
   );
+
+  register_post_type( 'services-post',
+  array(
+    'label' => 'Услуги',
+    'public' => true,
+    'has_archive' => true,
+    'show_ui'              => true,
+    'menu_position'=>5,
+    'supports'             => array('title', 'editor', 'thumbnail')
+    )
+  );
+
 	register_post_type( 'masters-post',
     array(
       'label' => 'Мастера',
@@ -64,4 +76,4 @@ register_post_type( 'shares-post',
     )
   );
 
-//   flush_rewrite_rules( false );
+  // flush_rewrite_rules( false );

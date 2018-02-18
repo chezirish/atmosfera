@@ -19,8 +19,7 @@ $(function() {
     
 
     
-    
-
+    // init slick
     if( $('.articles-carousel') ){
         $('.articles-carousel').slick({
             slidesToShow: 2,
@@ -214,17 +213,35 @@ $(function() {
         });
     }
 
-
-
-    if( $(".single-master") ){
-        $(".single-master").click(function(e){
-            var slideIndex = $(this).index();
-            $( '.masters-carousel' ).slick( "slickGoTo", parseInt(slideIndex) );
+    
+    if( $('.masters-list-imges') ){
+        $('.masters-list-imges').slick({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            // mobileFirst: true,
+            // dots: true,
+            nextArrow: $('.next-arrow4'),
+            prevArrow: $('.previos-arrow4')
         });
     }
 
 
 
+    if( $(".single-master") ){
+        $(".single-master").click(function(e){
+
+            var slideIndex = $(this).attr('data-slick-index');
+            $( '.masters-carousel' ).slick( "slickGoTo", parseInt(slideIndex) );
+        });
+    }
+
+    $('.masters-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.single-master').removeClass("single-master-selected");
+        $('.single-master[data-slick-index='+ nextSlide + ']').addClass("single-master-selected");
+    });
+
+
+    // slick arrow styles
     function sliderArrows(nextArrow, prevArrow) {
         var nextArrow = document.getElementsByClassName(nextArrow)[0];
         var previosArrow = document.getElementsByClassName(prevArrow)[0];
@@ -257,6 +274,7 @@ $(function() {
         sliderArrows('next-arrow', 'previos-arrow');
         sliderArrows('next-arrow2', 'previos-arrow2');
         sliderArrows('next-arrow3', 'previos-arrow3');
+        sliderArrows('next-arrow4', 'previos-arrow4');
    
 
 

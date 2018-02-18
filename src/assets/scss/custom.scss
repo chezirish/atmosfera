@@ -2,8 +2,29 @@
     background: rgba(0, 0, 0, .2);
 }
 
+.slick-list {
+    outline: none;
+}
+
+.slick-list {
+    outline: none !important;
+}
+
+.slick-slide:focus { 
+    outline: none; 
+}
+
 .entry-title {
     display: none;
+}
+
+.main__form {
+    padding-bottom: 1rem;
+}
+
+.politics p {
+    margin: 0;
+    text-align: center;
 }
 
 .breadcrumbs {
@@ -196,14 +217,14 @@
     width: 100%;
 }
 
-.next-arrow, .next-arrow2, .next-arrow3 {
+.next-arrow, .next-arrow2, .next-arrow3, .next-arrow4 {
     position: absolute;
     right: 15px;
     padding-top: 60px;
     z-index: 2;
 }
 
-.previos-arrow, .previos-arrow2, .previos-arrow3 {
+.previos-arrow, .previos-arrow2, .previos-arrow3, .previos-arrow4 {
     position: absolute;
     left: 15px;
     z-index: 2;
@@ -523,6 +544,10 @@
 
 }
 
+.single-master-selected img {
+    border: 2px solid #902A37;
+}
+
 .masters-wrapper {
     max-width: 65rem;
     margin: 0 auto;
@@ -574,15 +599,19 @@
     width: 183px;
 }
 
-.masters-list .single-master-last img {
-    margin: 0;
-}
+// .masters-list .single-master-last img {
+//     margin: 0;
+// }
 
 .masters-list-imges {
     padding-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.masters-list-imges .single-master:last-child img {
+    margin: 0;
 }
 
 
@@ -865,6 +894,22 @@
     // background:  url('../images/images/kkk.png') no-repeat;
 }
 
+.services__content .custom-style a {
+    background: none;
+}
+
+.services__content  .menu .is-active > a { 
+    color: #bd3849;
+}
+
+.services__content .custom-style li  {
+    list-style-type: none;
+}
+
+.services__content .custom-style > li  {
+    border-bottom: 1px solid #902A37;
+}
+
 .services__content .services-items a {
     color: black;
 }
@@ -887,7 +932,7 @@
 
 .services__service-img {
     flex-grow: 1;
-    flex-basis: 60rem;
+    // flex-basis: 60rem;
 }
 
 .services__service-info {
@@ -1041,6 +1086,7 @@
 
 //___________________________ sindle article page ___________________________//
 
+
 .article-info {
     width: 100%;
 }
@@ -1082,6 +1128,19 @@
 }
 
 
+//___________________________ reviews page ___________________________//
+
+.single-review {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid brown;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.single-review-date {
+    text-align: left;
+}
 
 //___________________________ breakpoints ___________________________//
 
@@ -1175,11 +1234,11 @@
 
     
 
-    .next-arrow, .next-arrow2, .next-arrow3 {
+    .next-arrow, .next-arrow2, .next-arrow3, .next-arrow4 {
         transform: scale(0.7, 0.7);
     }
 
-    .previos-arrow, .previos-arrow2, .previos-arrow3 {
+    .previos-arrow, .previos-arrow2, .previos-arrow3, .previos-arrow4 {
         transform: scale(0.7, 0.7);
     }
 
@@ -1234,7 +1293,7 @@
 
 
 @media screen and (min-width: 94em) {
-    .next-arrow, .next-arrow2, .next-arrow3 {
+    .next-arrow, .next-arrow2, .next-arrow3, .next-arrow4 {
         position: absolute;
         right: initial;
         left: 1420px;
@@ -1250,7 +1309,7 @@
         padding-top: 120px;
     }
     
-    .previos-arrow, .previos-arrow2, .previos-arrow3 {
+    .previos-arrow, .previos-arrow2, .previos-arrow3, .previos-arrow4 {
         position: absolute;
         left: initial;
         right: 1420px;

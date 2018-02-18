@@ -70,14 +70,14 @@ get_header(); ?>
                 </nav>
             </div>
         </div>
-        <div class="medium-5 large-4 columns">
+        <div class="medium-5 large-4 columns main__form">
             <p class="footer-phone"><span class="phone"><i class="fa fa-phone" aria-hidden="true"></i></span><?php the_field('phone', get_option( 'page_on_front' ));  ?> <span class="address"><i class="fas fa-map-marker"></i></span><?php the_field('address', get_option( 'page_on_front' ));  ?></p>
             <p class="info-time"><span class="address"><i class="far fa-clock"></i></span><?php the_field('time', get_option( 'page_on_front' ));  ?></p>
             <div class="social-icons">
                 <ul class="menu align-center">
-                    <li><a href="#"><i class="fab fa-vk"></i></a></li>
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a target="_blank" href="<?php the_field('vk-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-vk"></i></a></li>
+                    <li><a target="_blank" href="<?php the_field('fb-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a target="_blank" href="<?php the_field('inst-link', get_option( 'page_on_front' ));  ?>"><i class="fab fa-instagram"></i></a></li>
                 </ul>
             </div>
             <div class="info-form">
@@ -89,6 +89,7 @@ get_header(); ?>
                     <input type="submit" class="button" value="ЗАПИСАТЬСЯ">
                 </form>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
+                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>   
             </div>     
         </div>
     </div>
@@ -109,7 +110,7 @@ get_header(); ?>
             </div> -->
 
 
-            <?php
+            <?php 
             
             $ourCurrentPage = get_query_var('paged');
             $args = array(
@@ -212,7 +213,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="services-button">
-            <a href="#" class="button">СМОТРЕСТЬ ВСЕ УСЛУГИ</a>
+            <a href="/atmosfera/services" class="button">СМОТРЕТЬ ВСЕ УСЛУГИ</a>
         </div>
     </div>
 </section>
@@ -268,7 +269,7 @@ get_header(); ?>
 
             </div>
             <div class="reviews-button">
-                <a href="#" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
+                <a href="/atmosfera/reviews" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
             </div>
         </div>
 </section>
@@ -301,6 +302,7 @@ get_header(); ?>
                         <input type="submit" class="button" value="Отправить сообщение">
                     </div>
                 </div>
+                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
             </form>
         </div>        
     </div>
@@ -313,7 +315,7 @@ get_header(); ?>
                 <img class="next-arrow3" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
                 <img class="previos-arrow3" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
                 <div class="masters-carousel">
-                    <div class="masters-slick-item clearfix">
+                    <!-- <div class="masters-slick-item clearfix">
                             <div class="float-left master-img-wrapper">
                                 <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
                             </div>
@@ -325,78 +327,67 @@ get_header(); ?>
                         <div class="masters-button">
                             <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
                         </div>
-                    </div>
-                    <div class="masters-slick-item clearfix">
-                            <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_2.jpg" alt="women">
-                            </div>
-                            <div class="masters-text float-left">
-                                <h4>Имя Фамилия</h4>
-                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
-                            </div>
-                        <div class="masters-button">
-                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
-                        </div>
-                    </div>
-                    <div class="masters-slick-item clearfix">
-                            <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_3.jpg" alt="women">
-                            </div>
-                            <div class="masters-text float-left">
-                                <h4>Имя Фамилия</h4>
-                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
-                            </div>
-                        <div class="masters-button">
-                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
-                        </div>
-                    </div>
-                    <div class="masters-slick-item clearfix">
-                            <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_4.jpg" alt="women">
-                            </div>
-                            <div class="masters-text float-left">
-                                <h4>Имя Фамилия</h4>
-                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
-                            </div>
-                        <div class="masters-button">
-                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
-                        </div>
-                    </div>
-                    <div class="masters-slick-item clearfix">
-                            <div class="float-left master-img-wrapper">
-                                <img class="master-img" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_5.jpg" alt="women">
-                            </div>
-                            <div class="masters-text float-left">
-                                <h4>Имя Фамилия</h4>
-                                <p class="masters-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita quas, molestias odio nobis dolorum alias tenetur ad voluptatem dolore officia sint sequi iure ea vitae ipsam commodi, qui, rem cupiditate?</p>
-                            </div>
-                        <div class="masters-button">
-                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
-                        </div>
-                    </div>
+                    </div> -->
+                   
+                    <?php
+
+
+                    $array = get_post_meta( get_option( 'page_on_front' ), 'masters_group', true );
+                    // var_dump($array);
+                        
+                    if( !empty($array) ){
+
+                        foreach ( $array as $key => $entry ) { 
+                            
+                            if( isset( $entry['img'] ) ) { $img = $entry['img'];  }
+                            if( isset( $entry['name'] ) ) { $name = esc_html( $entry['name'] );  }
+                            if( isset( $entry['title'] ) ) { $title = esc_html( $entry['title'] );  }
+                            if( isset( $entry['content'] ) ) { $content = esc_html( $entry['content'] );  }
+                            
+                            
+                            ?>
+                                                    
+                                <div class="masters-slick-item clearfix">
+                                    <div class="float-left master-img-wrapper">
+                                        <?php // wp_get_attachment_image( $img, 'full', false, array('class' => 'master-img') );  ?>
+                                        <img class="master-img" src="<?php if( !empty($img) ) echo $img; ?>" alt="women">
+                                    </div>
+                                    <div class="masters-text float-left">
+                                        <h4><?php  if( !empty($name) ) echo $name; ?></h4>
+                                        <p class="masters-title"><?php if( !empty($title) ) echo $title; ?></p>
+                                        <p><?php if( !empty($content) ) echo $content; ?></p>
+                                    </div>
+                                        <div class="masters-button">
+                                            <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                                        </div>
+                                    </div>
+                                                        
+                                <?php 
+                            }
+                            
+                    }
+
+                    ?>
+
+
                 </div>
             <div class="masters-list">
                 <p class="masters-list-title">Наши мастера</p>
+                <img class="next-arrow4" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/1_1.png" alt="arrow">
+                <img class="previos-arrow4" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/2_2.png" alt="arrow">
                 <div class="masters-list-imges">
+
+                    <!-- <div class="single-master single-master-selected">
+                        <img src="<?php //echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
+                    </div>-->
+
+                    <?php foreach ( $array as $key => $entry ) :  if( isset( $entry['img'] ) ) { $img = $entry['img'];  } ?>
+
                     <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
+                        <img src="<?php if( !empty($img) ) echo $img; ?>" alt="women">
                     </div>
-                    <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_2.jpg" alt="women">
-                    </div>
-                    <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_3.jpg" alt="women">
-                    </div>
-                    <div class="single-master">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_4.jpg" alt="women">
-                    </div>
-                    <div class="single-master single-master-last">
-                        <img src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_5.jpg" alt="women">
-                    </div>
+
+                    <?php endforeach; ?>
                 </div>
             </div> 
             </div>
