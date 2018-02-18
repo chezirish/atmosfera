@@ -150,8 +150,7 @@ get_header(); ?>
     </div>
     <div class="services-wrapper">
         <div class="grid">
-            <div class="grid-sizer"></div>
-            <div class="grid-item grid-item--width2">
+            <!-- <div class="grid-item">
                 <a href="#">
                     <div class="modal">
                         <p class="modal-title">КОСМЕТАЛОГИЯ</p>
@@ -191,7 +190,7 @@ get_header(); ?>
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/5.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
-            <div class="grid-item height-auto">
+            <div class="grid-item">
                 <a href="#">
                     <div class="modal">
                         <p class="modal-title">КОСМЕТАЛОГИЯ</p>
@@ -201,16 +200,67 @@ get_header(); ?>
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/6.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
-            <div class="grid-item height-auto last-block grid-item--width2">
+            <div class="grid-item">
                 <a href="#">
                     <div class="modal">
                         <p class="modal-title">КОСМЕТАЛОГИЯ</p>
                         <p>Узнать подробнее</p>
                     </div>
                 </a>
-                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/2.jpg" alt="">
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/4.jpg" alt="">
                 <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
             </div>
+            <div class="grid-item">
+                <a href="#">
+                    <div class="modal">
+                        <p class="modal-title">КОСМЕТАЛОГИЯ</p>
+                        <p>Узнать подробнее</p>
+                    </div>
+                </a>
+                <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/img/gallery/7.jpg" alt="">
+                <p class="name-service">ПАРИКМАХЕРСКИЕ УСЛУГИ</p>
+            </div> -->
+
+
+            <?php
+
+
+                    $array = get_post_meta( get_option( 'page_on_front' ), 'main_services_group', true );
+                    // var_dump($array);
+                        
+                    if( !empty($array) ){
+
+                        foreach ( $array as $key => $entry ) { 
+                            
+                            if( isset( $entry['img'] ) ) { $img = $entry['img'];  }
+                            if( isset( $entry['name'] ) ) { $name = esc_html( $entry['name'] );  }
+                            if( isset( $entry['url'] ) ) { $link = $entry['url'] ;  }
+                            
+                            $blank = $link['blank'] === 'true' ? true : false;
+
+                            ?>                                                  
+                                    
+                                        <div class="grid-item">
+                                            <a target="<?php  if( $blank  )  echo '_blank';  ?>" href="<?php  if( !empty($link['url']) ) echo $link['url']; ?>">
+                                                <div class="modal">
+                                                    <p class="modal-title"><?php  if( !empty($name) ) echo $name; ?></p>
+                                                    <p>Узнать подробнее</p>
+                                                </div>
+                                            </a>
+                                            <img src="<?php if( !empty($img) ) echo $img; ?>" alt="service">
+                                            <p class="name-service"><?php  if( !empty($name) ) echo $name; ?></p>
+                                        </div>
+
+                                                        
+                                <?php 
+                            }
+                            
+                    }
+
+                ?>
+
+
+
         </div>
         <div class="services-button">
             <a href="/atmosfera/services" class="button">СМОТРЕТЬ ВСЕ УСЛУГИ</a>

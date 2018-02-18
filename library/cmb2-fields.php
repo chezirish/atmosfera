@@ -316,3 +316,84 @@ function services_metabox() {
 
 
 }
+
+
+
+
+add_action( 'cmb2_admin_init', 'services_main_metabox' );
+
+function services_main_metabox() {
+
+
+	$cmb_main_services = new_cmb2_box( array(
+		'id'            => 'services_main_metabox',
+		'title'         => esc_html__( 'Добавление услуг', 'cmb2' ),
+		'object_types'  => array( 'page' ), // Post type
+		'show_on'      => array( 'key' => 'page-template', 'value' => 'page-templates/main.php' ),
+		// 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
+		// 'context'    => 'normal',
+		// 'priority'   => 'high',
+		// 'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+		'closed'     => true, // true to keep the metabox closed by default
+		// 'classes'    => 'extra-class', // Extra cmb2-wrap classes
+		// 'classes_cb' => 'yourprefix_add_some_classes', // Add classes through a callback.
+	) );
+
+	$group_field_id = $cmb_main_services->add_field( array(
+		'id'          => 'main_services_group',
+		'type'        => 'group',
+		'description' => __( 'Generates reusable form entries', 'cmb2' ),
+		'show_on'      => array( 'key' => 'page-template', 'value' => 'page-templates/main.php' ),
+		// 'repeatable'  => false, // use false if you want non-repeatable group
+		'options'     => array(
+			'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+			'remove_button' => __( 'Remove Entry', 'cmb2' ),
+			'sortable'      => true, // beta
+			'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+
+	$cmb_main_services->add_group_field( $group_field_id, array(
+		'name'    => 'Картинка услуги',
+		'desc'    => 'Загрузите фото или введите ссылку на фото.',
+		'id'      => 'img',
+		'type'    => 'file',
+		// Optional:
+		'options' => array(
+			'url' => true, // Hide the text input for the url
+		),
+		'text'    => array(
+			'add_upload_file_text' => 'Добавить фаил' // Change upload button text. Default: "Add or Upload File"
+		),
+		// query_args are passed to wp.media's library query.
+		'query_args' => array(
+			// 'type' => 'application/pdf', // Make library only display PDFs.
+			// Or only allow gif, jpg, or png images
+			'type' => array(
+				'image/gif',
+				'image/jpeg',
+				'image/png',
+			),
+		),
+		// 'preview_size' => 'large', // Image size to use when previewing in the admin.
+	) );
+
+	// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	$cmb_main_services->add_group_field( $group_field_id, array(
+		'name' => 'Название услуги',
+		'id'   => 'name',
+		'type' => 'text',
+		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+
+	$cmb_main_services->add_group_field( $group_field_id, array(
+		'name' => __( 'Ссылка на услугу', 'cmb2' ),
+		'desc' => __( 'Открывать в новом окне', 'cmb2' ),
+		'id'   => 'url',
+		'type' => 'link_picker',
+		// 'split_values' => true  // default is false
+	) );
+
+}
