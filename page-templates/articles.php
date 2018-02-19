@@ -84,7 +84,7 @@ get_header(); ?>
                                 <p class="slick-link-wrapper"><a class="slick-link" href="<?php the_permalink(); ?>">Подробнее</a></p>
                             </div>
                             <h5><?php the_title() ?> </h5>
-                            <?php the_excerpt(); ?>
+                            <?php wordwrap(the_excerpt(), 50, "<br>", false); ?> 
                             <p class="articles__link"><a  href="<?php the_permalink(); ?>">Читать далее</a></p>
                         </div>
 

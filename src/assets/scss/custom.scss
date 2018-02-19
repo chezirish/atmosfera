@@ -867,6 +867,7 @@
     margin: 0 auto;
     padding: 4rem 0;
 }
+    
 
 .gift-sertificates h3 {
     text-align: center;
@@ -1044,6 +1045,10 @@
     flex-basis: 330px;
 }
 
+.master img {
+    width: 546px;
+}
+
 .master h2 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.52);
 }
@@ -1077,6 +1082,14 @@
     padding: 4rem 0;
 }
 
+
+
+.article-info .article-preview img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
 .articles__wrapper {
     display: flex;
     justify-content: space-between;
@@ -1095,17 +1108,18 @@
     text-align: right;
 }
 
-//___________________________ sindle article page ___________________________//
+//___________________________ single article page ___________________________//
 
 
 .article-info {
     width: 100%;
 }
 
+
 .article-preview {
     height: 15rem;
     overflow: hidden;
-    background: url(../images/images/sl_viz2.jpg) 0 100% no-repeat;
+    // background: url(../images/images/sl_viz2.jpg) 0 100% no-repeat;
     background-size: cover;
 }
 
@@ -1124,10 +1138,6 @@
     text-align: center;
 }
 
-
-.article-info img {
-    width: 100%;
-}
 
 .also .article-item {
     padding: 0 80px;
@@ -1156,6 +1166,10 @@
 //___________________________ breakpoints ___________________________//
 
 @media screen and (max-width: 39.9375em) {
+
+    .article-info .article-preview img {
+        width: 100%;
+    }
 
     #header-nav {
         padding-right: 0;
@@ -1275,6 +1289,17 @@
         float: none !important;
     }   
 
+
+    // .article-info .article-preview img {
+    //     width: 50%;
+    //     display: block;
+    //     margin: 0 auto;
+    // }
+
+    .gift-sertificates-wrapper .next-arrow {
+        left: 500px;
+    }
+
     .masters-text {
         width: 100%;
         text-align: center;
@@ -1320,6 +1345,16 @@
         left: 1420px;
         padding-top: 60px;
         z-index: 2;
+    }
+
+    // .article-info .article-preview img {
+    //     width: 50%;
+    //     display: block;
+    //     margin: 0 auto;
+    // }
+
+    .gift-sertificates-wrapper .next-arrow {
+        left: 947px;
     }
 
     .licence__content .next-arrow {

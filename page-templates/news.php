@@ -89,12 +89,13 @@ get_header(); ?>
                             <div class="slick-item shares-block">
                                 <p><?php  the_time('d.m.Y'); ?></p>
                                 <?php the_post_thumbnail('', array(
-                                'class' => "news__img",
+                                'class' => "",
                                 )) ?>
                                 <p class="slick-link-wrapper"><a class="slick-link" href="<?php the_permalink(); ?>">Подробнее</a></p>
                             </div>
                             <h5><?php the_title() ?> </h5>
-                            <?php the_excerpt(); ?>
+                            <?php //$data = the_excerpt(); var_dump($data); ?>
+                            <?php wordwrap(the_excerpt(), 50, "<br>", false); ?>
                             <p class="articles__link"><a  href="<?php the_permalink(); ?>">Читать далее</a></p>
                         </div>
 

@@ -57,10 +57,10 @@ $(function() {
     if( $('.gift-sertificates-carousel') ){
         $('.gift-sertificates-carousel').slick({
             slidesToShow: 1,
-            slidesToScroll: 1
-            // dots: true,
+            slidesToScroll: 1,
+            dots: true
             // nextArrow: $('.next-arrow'),
-            // prevArrow: $('.previos-arrow'),
+            // prevArrow: $('.previos-arrow')
             // mobileFirst: true,
         });
     }
@@ -276,9 +276,6 @@ $(function() {
         sliderArrows('next-arrow3', 'previos-arrow3');
         sliderArrows('next-arrow4', 'previos-arrow4');
    
-
-
-
 
 
 
