@@ -25,8 +25,8 @@ get_header(); ?>
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/line.png" alt="line">
                 <p class="title-form">оставьте заявку</p>
                 <form class="header-form" action="">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Телефон">
+                    <input required type="text" placeholder="Имя">
+                    <input required type="number" placeholder="Телефон">
                     <select name="" id="">
                         <option value="">Номинал 5000 р.</option>
                         <option value="">Номинал 4000 р.</option>
@@ -34,7 +34,11 @@ get_header(); ?>
                     <input type="submit" class="button" value="ЗАПИСАТЬСЯ">
                 </form>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
-                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
+                <span class="politics"> 
+                    <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                        <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                    <?php endif; ?>
+                </span>   
             </div>     
         </div>
     </div>

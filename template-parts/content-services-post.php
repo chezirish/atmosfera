@@ -148,8 +148,8 @@ $services = get_pages(array(
 ?>
 
 <section class="seo-text">
-    <h1> <?php the_field('seo-title', $services ) ?></h1>
-    <p><?php the_field('seo-content', $services ) ?></p>
+    <h1> <?php the_field('seo-title') ?></h1>
+    <p><?php the_field('seo-content') ?></p>
 </section>
 
 

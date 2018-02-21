@@ -84,12 +84,18 @@ get_header(); ?>
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/line.png" alt="line">
                 <p class="title-form">оставьте заявку</p>
                 <form class="header-form" action="">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Телефон">
-                    <input type="submit" class="button" value="ЗАПИСАТЬСЯ">
+                    <input required type="text" placeholder="Имя">
+                    <input required type="number" placeholder="Телефон">
+                    <input required type="submit" class="button" value="ЗАПИСАТЬСЯ">
                 </form>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
-                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>   
+                <span class="politics"> 
+                <span class="politics"> 
+                    <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                        <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                    <?php endif; ?>
+                </span>   
+                </span>   
             </div>     
         </div>
     </div>
@@ -332,13 +338,13 @@ get_header(); ?>
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="Ваше имя">
+                        <input required type="text" placeholder="Ваше имя">
                     </div>
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="Телефон">
+                        <input required type="number" placeholder="Телефон">
                     </div>
                     <div class="medium-4 cell">
-                        <input type="text" placeholder="Email (не обязательно)">
+                        <input type="email"  placeholder="Email (не обязательно)">
                     </div>
                     </div>
                 </div>
@@ -346,13 +352,17 @@ get_header(); ?>
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                     <div class="medium-8 cell">
-                        <input type="text" placeholder="Введите сообщение">
+                        <input required type="text" placeholder="Введите сообщение">
                     </div>
                     <div class="medium-4 cell">
-                        <input type="submit" class="button" value="Отправить сообщение">
+                        <input required type="submit" class="button" value="Отправить сообщение">
                     </div>
                 </div>
-                <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
+                <span class="politics"> 
+                    <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                        <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                    <?php endif; ?>
+                </span>   
             </form>
         </div>        
     </div>

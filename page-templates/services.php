@@ -14,9 +14,22 @@ get_header(); ?>
         <div class="medium-8 large-8 columns">
             <div class="services__conten-wrapper">
                 <div class="services__service-info">
-                    <h3>Выберите услугу</h3>
+                    <h3><?php wp_title(""); ?></h3>
                 </div>
             </div>
+            <?php
+                if (have_posts()):
+
+                    
+                    while (have_posts()) : the_post(); 
+                        $Content = get_the_content();
+                        $stripped = strip_tags($Content); ?>
+                        
+                        <p class="service__info"><?php echo $stripped; ?></p>
+                    <?php endwhile;
+                endif;
+            ?>
+            <!-- <p class="service__info">Сдесь вы можете узнать о различных услугах нашего салона.</p> -->
         </div>
     </div>
 </section>

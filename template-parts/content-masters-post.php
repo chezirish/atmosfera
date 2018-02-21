@@ -6,11 +6,11 @@
                 <?php the_post_thumbnail('', array( 'class' => "",)) ?>
             </div>
         </div>
-        <div class="medium-12 large-6 columns">
+        <div class="medium-12 large-6 columns masters-single__content-wrapper">
            <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
            <h5>Ключивые навыки</h5>
-           <p> <?php the_field('skills'); ?></p>
+           <?php the_field('skills'); ?>
             <div class="services__button">
                 <a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a>
             </div>

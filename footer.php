@@ -17,7 +17,11 @@
                 <div class="footer-nav-bar">
                     <?php footer_nav_bar(); ?>
                 </div>
-                <p><?php the_field('politics', get_option( 'page_on_front' ));  ?></p>
+                <span class="politics"> 
+                    <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                        <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                    <?php endif; ?>
+                </span>   
                 <p><?php the_field('about', get_option( 'page_on_front' ));  ?></p>
             </div>
             <div class="large-3 cell">

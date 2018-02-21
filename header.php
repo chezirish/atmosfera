@@ -62,14 +62,17 @@
 				</div>
 			</section>
 
-			<nav aria-label="You are here:" role="navigation">
+
+			<?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?>
+
+			<!-- <nav aria-label="You are here:" role="navigation">
 			<ul class="breadcrumbs">
 				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Главная</a></li>
 				<li>
 				<span class="show-for-sr">Current: </span><?php wp_title('');  ?>
 				</li>
 			</ul>
-			</nav>
+			</nav> -->
 
 		<?php endif; ?>
 

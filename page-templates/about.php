@@ -45,17 +45,21 @@ get_header(); ?>
                     <div class="grid-container">
                         <div class="grid-x grid-padding-x">
                         <div class="medium-4 cell">
-                            <input type="text" placeholder="Ваше имя">
+                            <input required type="text" placeholder="Ваше имя">
                         </div>
                         <div class="medium-4 cell">
-                            <input type="text" placeholder="Телефон">
+                            <input required type="number" placeholder="Телефон">
                         </div>
                         <div class="medium-4 cell">
-                            <input type="submit" class="button" value="Отправить сообщение">
+                            <input required type="submit" class="button" value="Отправить сообщение">
                         </div>
                         </div>
                     </div>
-                    <span class="politics"> <?php the_field('politics', get_option( 'page_on_front' ));  ?> </span>  
+                    <span class="politics"> 
+                    <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                        <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                    <?php endif; ?>
+                </span>     
                 </form>
             </div>        
         </div>
