@@ -55,6 +55,9 @@ require_once( 'library/responsive-images.php' );
 require_once( 'library/custom-post-types.php'  );
 require_once( 'library/cmb2-fields.php'  );
 require_once( 'library/bread-crumbs.php'  );
+require_once( 'library/remove-editors.php'  );
+
+
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );

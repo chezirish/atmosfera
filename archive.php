@@ -15,7 +15,45 @@
  * @since FoundationPress 1.0.0
  */
 
-get_header(); ?>
+?>
+
+
+<?php
+
+	$is_custome = false;
+
+		if( get_post_type() === 'shares-post') {
+			require_once( dirname (__FILE__, 1) . '/page-templates/shares.php' );
+			$is_custome = true;
+			get_footer(); 
+			
+		} elseif (get_post_type() === 'services-post') {
+			require_once( dirname (__FILE__, 1) . '/page-templates/services.php' );
+			$is_custome = true;
+			get_footer(); 
+			
+		} elseif (get_post_type() === 'masters-post') {
+			require_once( dirname (__FILE__, 1) . '/page-templates/masters.php' );
+			$is_custome = true;
+			get_footer(); 
+			
+		} elseif (get_post_type() === 'new-post') {
+			require_once( dirname (__FILE__, 1) . '/page-templates/news.php' );
+			$is_custome = true;
+			get_footer(); 
+			
+		} elseif (get_post_type() === 'article-post') {
+			require_once( dirname (__FILE__, 1) . '/page-templates/articles.php' );
+			$is_custome = true;
+			get_footer(); 
+			
+		} else {
+			$is_custome = false;
+		}
+?>
+
+<?php if( !$is_custome ) : ?>
+<?php get_header(); ?>
 
 <div class="main-container">
 	<div class="main-grid">
@@ -50,4 +88,7 @@ get_header(); ?>
 	</div>
 </div>
 
-<?php get_footer();
+<?php get_footer(); ?>
+
+<?php endif ?>
+

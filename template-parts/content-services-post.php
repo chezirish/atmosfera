@@ -47,7 +47,7 @@
         <div class="medium-8 large-8 columns">
             <div class="services__conten-wrapper">
                 <div class="services__service-img">
-                    <?php the_post_thumbnail('full', array( 'class' => "",)) ?>
+                    <?php the_post_thumbnail(array(500), array( 'class' => "",)) ?>
                 </div>
                 <div class="services__service-info">
                     <h3><?php the_title(); ?></h3>

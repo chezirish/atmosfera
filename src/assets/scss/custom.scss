@@ -1037,7 +1037,8 @@
 }
 
 .shares__wrapper .slick-item {
-    height: auto;
+    height: 185px;
+    overflow: hidden;
 }
 
 .shares__wrapper .shares-block:nth-child(odd) {
@@ -1149,7 +1150,9 @@
 }
 
 .articles__wrapper .slick-item {
-    height: auto;
+    // height: auto;
+    overflow: hidden;
+    height: 220px;
 }
 
 .article {
@@ -1188,6 +1191,7 @@
 .also {
     max-width: 75rem;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .also h3 {
@@ -1201,7 +1205,8 @@
 }
 
 .article-item .slick-item {
-    height: auto;
+    height: 220px;
+    overflow: hidden;
 }
 
 .also .previos-arrow {

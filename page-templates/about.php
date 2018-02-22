@@ -5,10 +5,8 @@ Template Name: О нас
 get_header(); ?>
 
 <section class="about__info">
-    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates maiores animi, repellat rerum a soluta dicta eos aliquam cupiditate totam nostrum odio alias vitae officiis incidunt mollitia dolor tempora. Commodi, veniam blanditiis.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut libero fugit accusantium itaque, omnis voluptatibus cumque temporibus aliquam obcaecati dicta totam corrupti, quasi modi at quo esse maxime, repudiandae distinctio ab inventore rem repellat deserunt ipsa. Optio nostrum illo eaque, voluptatibus earum cupiditate deserunt quae repellendus dolores. Officia earum, asperiores sequi culpa quos sapiente eos, vel dolorum accusamus minus veritatis reiciendis exercitationem!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sint obcaecati quam et atque dicta, nihil voluptate natus ea fugiat unde facilis adipisci, ex mollitia sunt ipsum? Voluptatem modi, perferendis quas facilis fugiat deleniti suscipit, iste, minima eos voluptas sit!</p>
+    <h3><?php the_field('title');  ?></h3>
+    <?php the_field('content');  ?>
 </section>
 
 <section class="gallery">

@@ -17,11 +17,11 @@
 } */ ?>
 
 
-<?php    
+<?php /*
 $path =  dirname (__FILE__, 2) . '/page-templates/news.php';
 
 require_once( $path );
-/*
+
 	$args = array(
        '_builtin' => false,
     );
@@ -45,10 +45,10 @@ require_once( $path );
 		} else {
 			$is_custome = false;
 		}
-	} 
+	} */
 ?>
 
-<?php if( !$is_custome ) : ?>
+<?php// if( !$is_custome ) : ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header>
@@ -78,4 +78,4 @@ require_once( $path );
 	</footer>
 </article>
 
-<?php endif ?>
+<?php //endif ?>
