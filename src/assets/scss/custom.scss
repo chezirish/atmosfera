@@ -10,6 +10,22 @@
 //     border: 2px solid red;
 // }
 
+.pagination a {
+    display: inline-block;
+}
+
+.pagination {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.pagination .current {
+    background: #bd3849;
+}
+
+
+
 .slick-list {
     outline: none !important;
 }
@@ -823,6 +839,11 @@
     padding-top: 4rem;
 }
 
+.reveal img {
+    display: block;
+    margin: 0 auto;
+}
+
 // .licence__content .next-arrow {
 //     left: 1400px;
 // }
@@ -1152,6 +1173,7 @@
 .articles__wrapper .slick-item {
     // height: auto;
     overflow: hidden;
+    width: 400px;
     height: 220px;
 }
 
@@ -1212,7 +1234,6 @@
 .also .previos-arrow {
     padding-top: 60px;
 }
-
 
 //___________________________ reviews page ___________________________//
 
@@ -1343,6 +1364,16 @@
         transform: scale(0.7, 0.7);
     }
 
+    .also .slick-item {
+        height: auto;
+    }
+
+    .articles__wrapper .slick-item {
+        // height: auto;
+        overflow: hidden;
+        width: auto;
+        height: 220px;
+    }
 
 }
 
@@ -1399,6 +1430,10 @@
 
     .article-info p {
         padding: 0 2rem;
+    }
+
+    .also .slick-item {
+        height: auto;
     }
 }
 

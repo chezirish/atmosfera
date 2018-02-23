@@ -76,6 +76,7 @@ get_header(); ?>
             $args = array(
 
                 'paged' => $ourCurrentPage,
+                'posts_per_page' => 4,
                 'post_type' => 'new-post' );
             $postslist = new WP_Query( $args );
 
@@ -111,6 +112,9 @@ get_header(); ?>
         ?>
 
     </div>
+    <div class="pagination"  role="navigation" aria-label="Pagination">
+        <?php echo paginate_links(array('total' => $postslist->max_num_pages));  ?>
+    </div>   
 </section>
 
 <?php get_footer();

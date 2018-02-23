@@ -32,15 +32,22 @@ get_header(); ?>
                     // var_dump(
                     //     $array );
                  if ( !empty( $array ) ) {
-
+                    $count = 1;
                     foreach ( $array as $img => $attachment_url ) {
                         ?>
                         
-                        <div>
+                        <div data-open="<?php echo 'licence-modal' . $count?>">
                             <?php echo wp_get_attachment_image( $img, 'full' ); ?>
                         </div>
 
-                        <?php
+                        <div class=" tiny reveal" id="<?php echo 'licence-modal' . $count?>" data-reveal>
+                            <?php echo wp_get_attachment_image( $img, 'full' ); ?>
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <?php $count++;
                     }   
                  }
                     
@@ -72,15 +79,23 @@ get_header(); ?>
                  $array = get_post_meta( get_the_ID(), 'file_list_sertificates', 1 ); 
 
                  if (  !empty( $array ) ) {
-
+                    $count = 1;
                     foreach ( $array as $img => $attachment_url ) {
                         ?>
-                                                
-                        <div>
-                            <?php echo wp_get_attachment_image( $img, 'full' ); ?>
-                        </div>                          
+                                                              
 
-                        <?php
+                        <div data-open="<?php echo 'sertificate-modal' . $count?>">
+                            <?php echo wp_get_attachment_image( $img, 'full' ); ?>
+                        </div>
+
+                        <div class=" tiny reveal" id="<?php echo 'sertificate-modal' . $count?>" data-reveal>
+                            <?php echo wp_get_attachment_image( $img, 'full' ); ?>
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <?php $count++;
                     }  
                  }
                     
