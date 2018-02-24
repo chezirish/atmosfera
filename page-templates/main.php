@@ -83,11 +83,12 @@ get_header(); ?>
             <div class="info-form">
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/line.png" alt="line">
                 <p class="title-form">оставьте заявку</p>
-                <form class="header-form" action="">
-                    <input required type="text" placeholder="Имя">
-                    <input required type="number" placeholder="Телефон">
-                    <input required type="submit" class="button" value="ЗАПИСАТЬСЯ">
-                </form>
+                <!--<form class="header-form" action="">-->
+                <!--    <input required type="text" placeholder="Имя">-->
+                <!--    <input required type="number" placeholder="Телефон">-->
+                <!--    <input required type="submit" class="button" value="ЗАПИСАТЬСЯ">-->
+                <!--</form>-->
+                <?php echo do_shortcode( '[contact-form-7 id="319" title="Контактная форма на главной 1"]' ); ?>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
                 <span class="politics"> 
                 <span class="politics"> 
@@ -143,6 +144,7 @@ get_header(); ?>
                     <?php
 
                 endwhile;
+                wp_reset_postdata(); 
             endif;
             ?>
 
@@ -238,7 +240,7 @@ get_header(); ?>
 
                         foreach ( $array as $key => $entry ) { 
                             
-                            if( isset( $entry['img'] ) ) { $img = $entry['img'];  }
+                            if( isset( $entry['img'] ) ) { $img = $entry['img_id'];  }
                             if( isset( $entry['name'] ) ) { $name = esc_html( $entry['name'] );  }
                             if( isset( $entry['url'] ) ) { $link = $entry['url'] ;  }
                             
@@ -253,7 +255,8 @@ get_header(); ?>
                                                     <p>Узнать подробнее</p>
                                                 </div>
                                             </a>
-                                            <img src="<?php if( !empty($img) ) echo $img; ?>" alt="service">
+                                            <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="service"> -->
+                                            <?php echo wp_get_attachment_image( $img, 'full' ); ?>
                                             <p class="name-service"><?php  if( !empty($name) ) echo $name; ?></p>
                                         </div>
 
@@ -320,6 +323,8 @@ get_header(); ?>
                     <?php
 
                 endwhile;
+
+                wp_reset_postdata(); 
             endif;
             ?>
 
@@ -334,36 +339,39 @@ get_header(); ?>
     <h3>ЕСЛИ ЕСТЬ ВОПРОСЫ, ПОЖЕЛАНИЯ К НАШЕЙ РАБОТЕ</h3>
     <div class="feedback-wrapper clearfix">
         <div class="form-feedback-wrapper float-right">
-            <form class="">
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                    <div class="medium-4 cell">
-                        <input required type="text" placeholder="Ваше имя">
-                    </div>
-                    <div class="medium-4 cell">
-                        <input required type="number" placeholder="Телефон">
-                    </div>
-                    <div class="medium-4 cell">
-                        <input type="email"  placeholder="Email (не обязательно)">
-                    </div>
-                    </div>
-                </div>
+            <!--<form class="">-->
+            <!--    <div class="grid-container">-->
+            <!--        <div class="grid-x grid-padding-x">-->
+            <!--        <div class="medium-4 cell">-->
+            <!--            <input required type="text" placeholder="Ваше имя">-->
+            <!--        </div>-->
+            <!--        <div class="medium-4 cell">-->
+            <!--            <input required type="number" placeholder="Телефон">-->
+            <!--        </div>-->
+            <!--        <div class="medium-4 cell">-->
+            <!--            <input type="email"  placeholder="Email (не обязательно)">-->
+            <!--        </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
 
-                <div class="grid-container">
-                    <div class="grid-x grid-padding-x">
-                    <div class="medium-8 cell">
-                        <input required type="text" placeholder="Введите сообщение">
-                    </div>
-                    <div class="medium-4 cell">
-                        <input required type="submit" class="button" value="Отправить сообщение">
-                    </div>
-                </div>
+            <!--    <div class="grid-container">-->
+            <!--        <div class="grid-x grid-padding-x">-->
+            <!--        <div class="medium-8 cell">-->
+            <!--            <input required type="text" placeholder="Введите сообщение">-->
+            <!--        </div>-->
+            <!--        <div class="medium-4 cell">-->
+            <!--            <input required type="submit" class="button" value="Отправить сообщение">-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</form>-->
+            
+            
+            <?php echo do_shortcode( '[contact-form-7 id="320" title="Контактная форма на главной 2"]' ); ?>
                 <span class="politics"> 
                     <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
                         <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
                     <?php endif; ?>
-                </span>   
-            </form>
+                </span>
         </div>        
     </div>
 </section>
@@ -390,8 +398,6 @@ get_header(); ?>
                     </div> -->
                    
                     <?php
-
-
                     $array = get_post_meta( get_option( 'page_on_front' ), 'masters_group', true );
                     // var_dump($array);
                         
@@ -399,18 +405,18 @@ get_header(); ?>
 
                         foreach ( $array as $key => $entry ) { 
                             
-                            if( isset( $entry['img'] ) ) { $img = $entry['img'];  }
+                            if( isset( $entry['img'] ) ) { $img = $entry['img_id'];  }
                             if( isset( $entry['name'] ) ) { $name = esc_html( $entry['name'] );  }
                             if( isset( $entry['title'] ) ) { $title = esc_html( $entry['title'] );  }
                             if( isset( $entry['content'] ) ) { $content = esc_html( $entry['content'] );  }
                             
-                            
+                    
                             ?>
                                                     
                                 <div class="masters-slick-item clearfix">
                                     <div class="float-left master-img-wrapper">
-                                        <?php // wp_get_attachment_image( $img, 'full', false, array('class' => 'master-img') );  ?>
-                                        <img class="master-img" src="<?php if( !empty($img) ) echo $img; ?>" alt="women">
+                                        <?php echo wp_get_attachment_image( $img, 'full', false, array('class' => 'master-img') );  ?>
+                                        <!-- <img class="master-img" src="<?php //if( !empty($img) ) echo $img; ?>" alt="women"> -->
                                     </div>
                                     <div class="masters-text float-left">
                                         <h4><?php  if( !empty($name) ) echo $name; ?></h4>
@@ -443,8 +449,12 @@ get_header(); ?>
 
                     <?php foreach ( $array as $key => $entry ) :  if( isset( $entry['img'] ) ) { $img = $entry['img'];  } ?>
 
+                    <?php if( isset( $entry['img'] ) ) { $img = $entry['img_id'];  } ?>
+                    
+
                     <div class="single-master">
-                        <img src="<?php if( !empty($img) ) echo $img; ?>" alt="women">
+                        <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="women"> -->
+                        <?php echo wp_get_attachment_image( $img, 'full' ); ?>
                     </div>
 
                     <?php endforeach; ?>
@@ -461,7 +471,8 @@ get_header(); ?>
 
 
 <section class="maps">
-    <?php the_field('map', get_option( 'page_on_front' ))  ?>
+    <?php //the_field('map', get_option( 'page_on_front' ))  ?>
+    <?php the_field('map');  ?>
 </section>
 
 <?php get_footer();
