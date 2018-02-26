@@ -230,7 +230,7 @@ get_header(); ?>
             </div> -->
 
 
-            <?php
+            <?php /*
 
 
                     $array = get_post_meta( get_option( 'page_on_front' ), 'main_services_group', true );
@@ -266,7 +266,52 @@ get_header(); ?>
                             
                     }
 
-                ?>
+                */?>
+
+        <?php
+
+
+        $categories=get_categories(
+            array( 'parent' => 19 )
+        );
+        
+
+        foreach ($categories as $c) {
+            $id = $c->cat_ID;
+           
+            $args = array(
+                'post_type'        => 'services-post',
+                // 'category'         => 10,
+                'category__in' => array($id)
+            );
+
+            $posts_array = get_posts( $args );
+
+            ?>
+
+            
+                    <div class="grid-item">
+                        <a target="_blank" href="<?php echo $posts_array[0]->guid; ?>">
+                            <div class="modal">
+                                <p class="modal-title"><?php  echo $posts_array[0]->post_title; ?> </p>
+                                <p>Узнать подробнее</p>
+                            </div>
+                        </a>
+                        <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="service"> -->
+                        <?php echo get_the_post_thumbnail($posts_array[0]->ID); ?>
+                        <p class="name-service"><?php  echo $posts_array[0]->post_title; ?></p>
+                    </div>
+
+            <?php
+
+
+        }
+
+
+        // Restore original post data.
+        wp_reset_postdata();
+        
+        ?>
 
 
 
@@ -397,7 +442,7 @@ get_header(); ?>
                         </div>
                     </div> -->
                    
-                    <?php
+                    <?php /*
                     $array = get_post_meta( get_option( 'page_on_front' ), 'masters_group', true );
                     // var_dump($array);
                         
@@ -433,6 +478,50 @@ get_header(); ?>
                             
                     }
 
+                   */ ?>
+
+
+                    <?php 
+                    
+                    $ourCurrentPage = get_query_var('paged');
+                    $args = array(
+        
+                        'paged' => $ourCurrentPage,
+                        'post_type' => 'masters-post' );
+                    $postslist = new WP_Query( $args );
+        
+                    if ( $postslist->have_posts() ) :
+                        while ( $postslist->have_posts() ) : $postslist->the_post();
+                        
+                            $imageContent = get_the_content();
+                            $stripped = strip_tags($imageContent, '<p>');
+                            
+                             ?>
+        
+        
+                        
+
+                                <div class="masters-slick-item clearfix">
+                                    <div class="float-left master-img-wrapper">
+                                        <?php //echo wp_get_attachment_image( $img, 'full', false, array('class' => 'master-img') );  ?>
+                                        <?php the_post_thumbnail('', array('class' => "master-img",)) ?>
+                                    </div>
+                                    <div class="masters-text float-left">
+                                        <h4><?php  the_title(); ?></h4>
+                                        <p class="masters-title"><?php echo $stripped ?></p>
+                                        <p><?php the_field('skills'); ?></p>
+                                    </div>
+                                    <div class="masters-button">
+                                        <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                                    </div>
+                                </div>
+        
+                            <?php
+        
+                        endwhile;
+                        wp_reset_postdata(); 
+                    endif;
+                    
                     ?>
 
 
@@ -447,17 +536,38 @@ get_header(); ?>
                         <img src="<?php //echo get_template_directory_uri(); ?>/dist/assets/images/images/mas_1.jpg" alt="women">
                     </div>-->
 
-                    <?php foreach ( $array as $key => $entry ) :  if( isset( $entry['img'] ) ) { $img = $entry['img'];  } ?>
 
-                    <?php if( isset( $entry['img'] ) ) { $img = $entry['img_id'];  } ?>
+                    <?php
+
+                    $ourCurrentPage = get_query_var('paged');
+                    $args = array(
+        
+                        'paged' => $ourCurrentPage,
+                        'post_type' => 'masters-post' );
+                    $postslist = new WP_Query( $args );
+        
+                    if ( $postslist->have_posts() ) :
+                        while ( $postslist->have_posts() ) : $postslist->the_post();
+                        
+                            $imageContent = get_the_content();
+                            $stripped = strip_tags($imageContent, '<p>');
+                            
+                             ?>
+
+                                <div class="single-master">
+                                    <?php the_post_thumbnail('full', array('class' => "master-img",)) ?>
+                                </div>
+        
+                            <?php
+        
+                        endwhile;
+                        wp_reset_postdata(); 
+                    endif;
                     
 
-                    <div class="single-master">
-                        <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="women"> -->
-                        <?php echo wp_get_attachment_image( $img, 'full' ); ?>
-                    </div>
+                    ?>
 
-                    <?php endforeach; ?>
+
                 </div>
             </div> 
             </div>

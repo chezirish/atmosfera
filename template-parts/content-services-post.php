@@ -41,8 +41,76 @@
             </li>
         </ul> -->
 
-        <?php service_nav_bar();  ?>
+        <?php //service_nav_bar();  ?>
+        <ul class="vertical menu accordion-menu" data-accordion-menu>
 
+        <?php
+
+
+        $categories=get_categories(
+            array( 'parent' => 19 )
+        );
+        
+        global $post;
+
+        foreach ($categories as $c) {
+            $id = $c->cat_ID;
+           
+            $args = array(
+                'post_type'        => 'services-post',
+                'category'         => $id,
+                // 'category__in' => array($id)
+            );
+
+            $posts_array = get_posts( $args );
+
+            // var_dump($posts_array);
+            $current = false;
+
+            for($i=0; $i < count($posts_array); $i++) {
+                if($post->ID === $posts_array[$i]->ID){
+                    $current = true;
+                }
+            }
+            
+            
+            ?>
+
+
+
+                <?php if($current): ?>
+                <a class="<?php if($post->ID === $posts_array[0]->ID) echo "current-service "; ?>" href="<?php echo $posts_array[0]->guid; ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
+                    <li class="accordion-menu-container">
+                        
+                        <ul class="menu vertical nested is-active">
+                            <?php for($i=1; $i < count($posts_array); $i++): ?>
+                                <?php if($posts_array[$i]->ID === $post->ID): ?>
+                                    <li><a class="current-service" href="<?php echo $posts_array[$i]->guid; ?>"><?php  echo $posts_array[$i]->post_title; ?></a></li>
+                                <?php else: ?>
+                                    <li><a href="<?php echo $posts_array[$i]->guid; ?>"><?php  echo $posts_array[$i]->post_title; ?></a></li>
+                                <?php endif ?>
+                            <?php endfor ?>
+                        </ul>
+                    </li>     
+
+                <?php else: ?>           
+                    <li class="accordion-menu-container">
+                        <a href="<?php echo $posts_array[0]->guid; ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
+                    </li>    
+
+                <?php endif ?>
+            <?php
+
+
+        }
+
+
+        // Restore original post data.
+        wp_reset_postdata();
+        
+        ?>
+
+        </ul>
         </div>
         <div class="medium-8 large-8 columns">
             <div class="services__conten-wrapper">

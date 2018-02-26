@@ -7,6 +7,7 @@ function remove_menus(){
 add_action( 'admin_menu', 'remove_menus' );
    
 
+function awesome_custom_post_type() {
 
 register_post_type( 'shares-post',
     array(
@@ -26,7 +27,8 @@ register_post_type( 'shares-post',
     'has_archive' => true,
     'show_ui'              => true,
     'menu_position'=>5,
-    'supports'             => array('title', 'editor', 'thumbnail')
+    'supports'             => array('title', 'editor', 'thumbnail'),
+    'taxonomies' => array('category'),
     )
   );
 
@@ -76,4 +78,8 @@ register_post_type( 'shares-post',
     )
   );
 
+}
   // flush_rewrite_rules( false );
+
+
+  add_action('init','awesome_custom_post_type');

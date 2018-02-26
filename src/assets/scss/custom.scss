@@ -580,6 +580,10 @@
 
 }
 
+.master-img-wrapper img {
+    max-width: 300px;
+}
+
 .single-master-selected img {
     border: 2px solid #902A37;
 }
@@ -946,6 +950,7 @@
     // background:  url('../images/images/kkk.png') no-repeat;
 }
 
+
 .services__content .custom-style a {
     background: none;
 }
@@ -956,6 +961,11 @@
 
 .services__content  .menu .is-active > a { 
     color: #bd3849;
+}
+
+.services__content .accordion-menu {
+    position: relative;
+    z-index: 2;
 }
 
 .services__content .custom-style li  {
@@ -973,6 +983,10 @@
 .accordion-menu-container{
     border-bottom: 1px solid #902A37;
 }
+
+html .services__content .current-service {
+    color: #bd3849;
+}   
 
 .services-items {
     margin-bottom: 2rem;
