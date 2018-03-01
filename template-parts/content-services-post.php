@@ -50,27 +50,48 @@
         $categories=get_categories(
             array( 'parent' => 19 )
         );
+
+        // var_dump( $categories);
         
         global $post;
 
         foreach ($categories as $c) {
             $id = $c->cat_ID;
-           
+        // var_dump( $c);
+        
+            $subCat=get_categories(
+                array( 'parent' => $id )
+            );
+            // var_dump($subCat[0]->cat_ID);
+
             $args = array(
                 'post_type'        => 'services-post',
-                'category'         => $id,
-                // 'category__in' => array($id)
+                // 'category'         => $id,
+                'category__in' => array($subCat[0]->cat_ID)
             );
 
-            $posts_array = get_posts( $args );
+            $childCat = get_posts( $args );
 
-            // var_dump($posts_array);
+            $args = array(
+                'post_type'        => 'services-post',
+                // 'category'         => $id,
+                'category__in' => array($id)
+            );
+
+            $parentCat = get_posts( $args );
+
+            // var_dump($parentCat[0]);
+
+            
             $current = false;
 
-            for($i=0; $i < count($posts_array); $i++) {
-                if($post->ID === $posts_array[$i]->ID){
+            for($i=0; $i < count($childCat); $i++) {
+                if($post->ID === $childCat[$i]->ID){
                     $current = true;
                 }
+            }
+            if($post->ID === $parentCat[0]->ID){
+                $current = true;
             }
             
             
@@ -79,15 +100,14 @@
 
 
                 <?php if($current): ?>
-                <a class="<?php if($post->ID === $posts_array[0]->ID) echo "current-service "; ?>" href="<?php echo $posts_array[0]->guid; ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
-                    <li class="accordion-menu-container">
-                        
+                <a class="<?php if($post->ID === $parentCat[0]->ID) echo "current-service "; ?>" href="<?php echo $parentCat[0]->guid . '#breadcrumbs' ?>"> <?php  echo $parentCat[0]->post_title; ?> </a>
+                    <li class="accordion-menu-container">           
                         <ul class="menu vertical nested is-active">
-                            <?php for($i=1; $i < count($posts_array); $i++): ?>
-                                <?php if($posts_array[$i]->ID === $post->ID): ?>
-                                    <li><a class="current-service" href="<?php echo $posts_array[$i]->guid; ?>"><?php  echo $posts_array[$i]->post_title; ?></a></li>
+                            <?php for($i=0; $i < count($childCat); $i++): ?>
+                                <?php if($childCat[$i]->ID === $post->ID): ?>
+                                    <li><a class="current-service" href="<?php echo $childCat[$i]->guid . '#breadcrumbs' ?>"><?php  echo $childCat[$i]->post_title; ?></a></li>
                                 <?php else: ?>
-                                    <li><a href="<?php echo $posts_array[$i]->guid; ?>"><?php  echo $posts_array[$i]->post_title; ?></a></li>
+                                    <li><a href="<?php echo $childCat[$i]->guid . '#breadcrumbs' ?>"><?php  echo $childCat[$i]->post_title; ?></a></li>
                                 <?php endif ?>
                             <?php endfor ?>
                         </ul>
@@ -95,7 +115,7 @@
 
                 <?php else: ?>           
                     <li class="accordion-menu-container">
-                        <a href="<?php echo $posts_array[0]->guid; ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
+                        <a href="<?php echo $parentCat[0]->guid . '#breadcrumbs' ?>"> <?php  echo $parentCat[0]->post_title; ?> </a>
                     </li>    
 
                 <?php endif ?>

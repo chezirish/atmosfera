@@ -38,7 +38,8 @@ register_post_type( 'shares-post',
       'public' => true,
       'has_archive' => true,
 			'show_ui'              => true,
-			'menu_position'=>5,
+      'menu_position'=>5,
+      'taxonomies' => array('category'),
 			'supports'             => array('title', 'editor', 'thumbnail')
     )
   );

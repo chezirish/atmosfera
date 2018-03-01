@@ -7,7 +7,7 @@ get_header(); ?>
 <section class="section-info">
     <div class="row">
         <div class="medium-4 large-4 columns">   
-        <a href="/atmosfera"><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt=""></a>
+        <a href="/atmosfera"><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/logo.png" alt="logo"></a>
 
             <div class="orbit clearfix" data-auto-play="false" role="region" data-orbit>
                 <div class="orbit-wrapper">
@@ -137,8 +137,8 @@ get_header(); ?>
 
                         <div class="slick-item">
                             <p class="slick-text"><?php the_field('title'); ?>  <span class="slick-span"><?php the_field('red-span'); ?></span></p>
-                            <?php the_post_thumbnail('', array('class' => "",)) ?>
-                            <p class="slick-link-wrapper"><a class="slick-link" href="<?php the_permalink(); ?>">Подробнее</a></p>
+                            <?php the_post_thumbnail('', array('class' => "min-height",)) ?>
+                            <p class="slick-link-wrapper"><a class="slick-link" href="<?php echo the_permalink() . '#breadcrumbs' ?>">Подробнее</a></p>
                         </div>
 
                     <?php
@@ -268,7 +268,7 @@ get_header(); ?>
 
                 */?>
 
-        <?php
+        <?php /*
 
 
         $categories=get_categories(
@@ -305,11 +305,48 @@ get_header(); ?>
             <?php
 
 
-        }
+        } 
 
 
         // Restore original post data.
-        wp_reset_postdata();
+        wp_reset_postdata(); */
+
+
+        
+        $ourCurrentPage = get_query_var('paged');
+        $args = array(
+
+            'paged' => $ourCurrentPage,
+            'category__in' => array(28),
+            'post_type' => 'services-post' );
+        $postslist = new WP_Query( $args );
+
+        if ( $postslist->have_posts() ) :
+            while ( $postslist->have_posts() ) : $postslist->the_post();
+            
+                $imageContent = get_the_content();
+                $stripped = strip_tags($imageContent, '<p>');
+                
+                 ?>
+
+                    <div class="grid-item">
+                    <a target="_blank" href="<?php echo the_permalink() . '#breadcrumbs' ?>">
+                        <div class="modal">
+                            <p class="modal-title"><?php  the_title(); ?> </p>
+                            <p>Узнать подробнее</p>
+                        </div>
+                    </a>
+                    <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="service"> -->
+                    <?php //echo get_the_post_thumbnail($posts_array[0]->ID); ?>
+                    <?php the_post_thumbnail('') ?>                    
+                    <p class="name-service"><?php  the_title(); ?></p>
+                    </div>
+
+                <?php
+
+            endwhile;
+            wp_reset_postdata(); 
+        endif;
         
         ?>
 
@@ -317,7 +354,7 @@ get_header(); ?>
 
         </div>
         <div class="services-button">
-            <a href="/atmosfera/services" class="button">СМОТРЕТЬ ВСЕ УСЛУГИ</a>
+            <a href="<?php echo get_page_link(208) . '#breadcrumbs'?>" class="button">СМОТРЕТЬ ВСЕ УСЛУГИ</a>
         </div>
     </div>
 </section>
@@ -375,7 +412,7 @@ get_header(); ?>
 
             </div>
             <div class="reviews-button">
-                <a href="/atmosfera/reviews" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
+                <a href="<?php echo get_page_link(208) . '#breadcrumbs'?>" class="button visited">СМОТРЕСТЬ ВСЕ ОТЗЫВЫ</a>
             </div>
         </div>
 </section>
@@ -487,6 +524,7 @@ get_header(); ?>
                     $args = array(
         
                         'paged' => $ourCurrentPage,
+                        'category__in' => array(28),
                         'post_type' => 'masters-post' );
                     $postslist = new WP_Query( $args );
         
@@ -524,6 +562,51 @@ get_header(); ?>
                     
                     ?>
 
+                    <?php /*
+
+
+                    $categories=get_categories(
+                        array( 'parent' => 19 )
+                    );
+                    
+
+                    foreach ($categories as $c) {
+                        $id = $c->cat_ID;
+                    
+                        $args = array(
+                            'post_type'        => 'masters-post',
+                            // 'category'         => 10,
+                            'category__in' => array($id)
+                        );
+
+                        $posts_array = get_posts( $args );
+
+                        ?>
+
+                        
+                                <div class="grid-item">
+                                    <a target="_blank" href="<?php echo $posts_array[0]->guid; ?>">
+                                        <div class="modal">
+                                            <p class="modal-title"><?php  echo $posts_array[0]->post_title; ?> </p>
+                                            <p>Узнать подробнее</p>
+                                        </div>
+                                    </a>
+                                    <!-- <img src="<?php //if( !empty($img) ) echo $img; ?>" alt="service"> -->
+                                    <?php echo get_the_post_thumbnail($posts_array[0]->ID); ?>
+                                    <p class="name-service"><?php  echo $posts_array[0]->post_title; ?></p>
+                                </div>
+
+                        <?php
+
+
+                    }
+
+
+                    // Restore original post data.
+                    wp_reset_postdata();
+                    
+                   */?>
+
 
                 </div>
             <div class="masters-list">
@@ -543,6 +626,7 @@ get_header(); ?>
                     $args = array(
         
                         'paged' => $ourCurrentPage,
+                        'category__in' => array(28),
                         'post_type' => 'masters-post' );
                     $postslist = new WP_Query( $args );
         

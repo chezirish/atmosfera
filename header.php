@@ -67,9 +67,9 @@
 
 			<!-- <nav aria-label="You are here:" role="navigation">
 			<ul class="breadcrumbs">
-				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Главная</a></li>
+				<li><a href="<?php// echo esc_url( home_url( '/' ) ); ?>">Главная</a></li>
 				<li>
-				<span class="show-for-sr">Current: </span><?php wp_title('');  ?>
+				<span class="show-for-sr">Current: </span><?php// wp_title('');  ?>
 				</li>
 			</ul>
 			</nav> -->

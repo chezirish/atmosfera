@@ -18,6 +18,24 @@ $(function() {
     });
     
 
+    // if( $('.js-height') ){
+    //     $('.js-height').each(function() {
+    //         $(this).ready(function() {
+    //             if($(this).height() < 184)  $(this).height(185);
+    //         }.bind($(this)));
+            
+    //     })
+        
+    //     // $('.js-height').css('height', '185px');
+    // }
+
+    // $('a').each(function() { 
+    //     var $this = $(this);
+    //     var href = $this.attr('href');  //get the value of an attribute 'href'
+    //     $this.attr('href', href + '#breadcrumbs'); //set the value of an attribute 'href'
+        
+    // });
+
     
     // init slick
     if( $('.articles-carousel') ){

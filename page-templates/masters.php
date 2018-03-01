@@ -34,7 +34,7 @@ get_header(); ?>
 
                         
                         <div class="master">
-                        <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('', array('class' => "",)) ?> </a>
+                        <a href="<?php echo the_permalink() . '#breadcrumbs' ?>"> <?php the_post_thumbnail('', array('class' => "",)) ?> </a>
                             <h2><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <div class="services__button">

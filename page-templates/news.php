@@ -92,12 +92,12 @@ get_header(); ?>
                                 <?php the_post_thumbnail('', array(
                                 'class' => "",
                                 )) ?>
-                                <p class="slick-link-wrapper"><a class="slick-link" href="<?php the_permalink(); ?>">Подробнее</a></p>
+                                <p class="slick-link-wrapper"><a class="slick-link" href="<?php echo the_permalink() . '#breadcrumbs' ?>">Подробнее</a></p>
                             </div>
                             <h5><?php the_title() ?> </h5>
                             <?php //$data = the_excerpt(); var_dump($data); ?>
                             <?php wordwrap(the_excerpt(), 50, "<br>", false); ?>
-                            <p class="articles__link"><a  href="<?php the_permalink(); ?>">Читать далее</a></p>
+                            <p class="articles__link"><a  href="<?php echo the_permalink() . '#breadcrumbs' ?>">Читать далее</a></p>
                         </div>
 
                     <?php

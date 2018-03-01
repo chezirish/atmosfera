@@ -34,7 +34,7 @@ get_header(); ?>
 
                 
                     <li class="accordion-menu-container">
-                        <a href="<?php echo $posts_array[0]->guid; ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
+                        <a href="<?php echo $posts_array[0]->guid . '#breadcrumbs' ?>"> <?php  echo $posts_array[0]->post_title; ?> </a>
                     </li>
                 
 
