@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Страница специалиста
+old Template
 */
 get_header(); ?>
 

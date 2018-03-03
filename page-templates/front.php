@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Front
+old file
 */
 get_header(); ?>
 

@@ -62,10 +62,9 @@
 
             <?php
             
-            $ourCurrentPage = get_query_var('paged');
             $args = array(
-
-                'paged' => $ourCurrentPage,
+                'posts_per_page'   => 6,
+                'no_found_rows' => true,
                 'post_type' => 'article-post' );
             $postslist = new WP_Query( $args );
 
@@ -94,9 +93,7 @@
                         
 
                 endwhile;
-
-
-
+                wp_reset_postdata();
             endif;
             ?>
 

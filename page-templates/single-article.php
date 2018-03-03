@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Страница статьи
+old template
 */
 get_header(); ?>
 

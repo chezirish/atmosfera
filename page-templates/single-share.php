@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Страница акции
+old template
 */
 get_header(); ?>
 
