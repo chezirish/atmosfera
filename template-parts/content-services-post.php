@@ -216,7 +216,7 @@
             </table>
             <div class="section-title">
                 <div class="services__button">
-                    <span><a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a></span>
+                    <span><a href="<?php $link = get_field('dikidi_service');  echo (isset(explode('"', $link)[1])) ? explode('"', $link)[1] : the_field('dikidi_service'); ?>" class="button">ОСТАВИТЬ ЗАЯВКУ</a></span>
                 </div>
             </div>
         </div>

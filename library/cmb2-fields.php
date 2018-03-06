@@ -175,7 +175,7 @@ function requisites_metabox() {
 
 
 
-add_action( 'cmb2_admin_init', 'masters_metabox' );
+// add_action( 'cmb2_admin_init', 'masters_metabox' );
 
 function masters_metabox() {
 
@@ -320,7 +320,7 @@ function services_metabox() {
 
 
 
-add_action( 'cmb2_admin_init', 'services_main_metabox' );
+// add_action( 'cmb2_admin_init', 'services_main_metabox' );
 
 function services_main_metabox() {
 

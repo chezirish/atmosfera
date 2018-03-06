@@ -9,7 +9,7 @@ get_header(); ?>
             
             $ourCurrentPage = get_query_var('paged');
             $args = array(
-
+                'posts_per_page' => -1,
                 'paged' => $ourCurrentPage,
                 'post_type' => 'otziv-post' );
             $postslist = new WP_Query( $args );

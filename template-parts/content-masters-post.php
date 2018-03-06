@@ -12,7 +12,7 @@
            <h5>Ключивые навыки</h5>
            <?php the_field('skills'); ?>
             <div class="services__button">
-                <a href="#" class="button">ОСТАВИТЬ ЗАЯВКУ</a>
+                <a href="<?php $link = get_field('dikidi_master');  echo (isset(explode('"', $link)[1])) ? explode('"', $link)[1] : the_field('dikidi_master'); ?>" class="button">ОСТАВИТЬ ЗАЯВКУ</a>
             </div>
         </div>
     </div>

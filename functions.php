@@ -64,13 +64,6 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
-function custom_posts_per_page( $query ) {
-    
-        if ( $query->is_archive() ) {
-            set_query_var('posts_per_page', 1);
-        }
-    }
-add_action( 'pre_get_posts', 'custom_posts_per_page' );
 
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */

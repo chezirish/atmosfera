@@ -1,6 +1,6 @@
 <?php
 /*
-old Template
+Template Name: Специалисты
 */
 get_header(); ?>
 
@@ -38,7 +38,7 @@ get_header(); ?>
                             <h2><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <div class="services__button">
-                                <a href="#" class="button">ЗАПИСАТЬСЯ ОНЛАЙН</a>
+                                <a href="<?php $link = get_field('dikidi_master');  echo (isset(explode('"', $link)[1])) ? explode('"', $link)[1] : the_field('dikidi_master'); ?>" class="button">ЗАПИСАТЬСЯ ОНЛАЙН</a>
                             </div>
                         </div>
                         
@@ -46,6 +46,7 @@ get_header(); ?>
                     <?php
 
                 endwhile;
+                wp_reset_postdata();
             endif;
             ?>
 
@@ -54,6 +55,11 @@ get_header(); ?>
     <div class="pagination"  role="navigation" aria-label="Pagination">
         <?php echo paginate_links(array('total' => $postslist->max_num_pages));  ?>
     </div>    
+</section>
+
+<section class="seo-text">
+    <h1><?php the_field('seo-title');  ?></h1>
+    <p><?php the_field('seo-content');  ?></p>
 </section>
 
 <?php get_footer();

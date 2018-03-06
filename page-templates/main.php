@@ -122,6 +122,7 @@ get_header(); ?>
             $ourCurrentPage = get_query_var('paged');
             $args = array(
 
+                'posts_per_page' => -1,
                 'paged' => $ourCurrentPage,
                 'post_type' => 'shares-post' );
             $postslist = new WP_Query( $args );
@@ -315,7 +316,7 @@ get_header(); ?>
         
         $ourCurrentPage = get_query_var('paged');
         $args = array(
-
+            'posts_per_page' => -1,
             'paged' => $ourCurrentPage,
             'category__in' => array(28),
             'post_type' => 'services-post' );
@@ -379,7 +380,7 @@ get_header(); ?>
             
             $ourCurrentPage = get_query_var('paged');
             $args = array(
-
+                'posts_per_page' => -1,
                 'paged' => $ourCurrentPage,
                 'post_type' => 'otziv-post' );
             $postslist = new WP_Query( $args );
@@ -522,7 +523,7 @@ get_header(); ?>
                     
                     $ourCurrentPage = get_query_var('paged');
                     $args = array(
-        
+                        'posts_per_page' => -1,
                         'paged' => $ourCurrentPage,
                         'category__in' => array(28),
                         'post_type' => 'masters-post' );
@@ -550,7 +551,7 @@ get_header(); ?>
                                         <p><?php the_field('skills'); ?></p>
                                     </div>
                                     <div class="masters-button">
-                                        <a href="#" class="button visited">ЗАПИСАТЬСЯ</a>
+                                        <a href="<?php $link = get_field('dikidi_master');  echo (isset(explode('"', $link)[1])) ? explode('"', $link)[1] : the_field('dikidi_master'); ?>" class="button visited">ЗАПИСАТЬСЯ</a>
                                     </div>
                                 </div>
         
@@ -624,7 +625,7 @@ get_header(); ?>
 
                     $ourCurrentPage = get_query_var('paged');
                     $args = array(
-        
+                        'posts_per_page' => -1,
                         'paged' => $ourCurrentPage,
                         'category__in' => array(28),
                         'post_type' => 'masters-post' );
