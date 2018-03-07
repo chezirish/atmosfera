@@ -15,7 +15,7 @@
         <h3>Записатся к нам очень просто</h3>
         <div class="feedback-wrapper clearfix">
             <div class="form-feedback-wrapper float-right">
-                <form class="">
+                <!-- <form class="">
                     <div class="grid-container">
                         <div class="grid-x grid-padding-x">
                         <div class="medium-4 cell">
@@ -30,11 +30,17 @@
                         </div>
                     </div>
                     <span class="politics"> 
+                        <?php //if(get_field('politics', get_option( 'page_on_front' ))) : ?>
+                            <p><a target="_blank" href="<?php //the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
+                        <?php //endif; ?>
+                    </span>   
+                </form> -->
+                <?php echo do_shortcode( '[contact-form-7 id="371" title="Страница статьи"]' ); ?>
+                <span class="politics"> 
                         <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>
                             <p><a target="_blank" href="<?php the_field('politics', get_option( 'page_on_front' ));  ?>">Политика конфиденциальности</a></p> 
                         <?php endif; ?>
                     </span>   
-                </form>
             </div>        
         </div>
     </div>

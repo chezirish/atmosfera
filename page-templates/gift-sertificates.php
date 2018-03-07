@@ -24,7 +24,7 @@ get_header(); ?>
             <div class="info-form">
                 <img src=" <?php echo get_template_directory_uri(); ?>/dist/assets/images/line.png" alt="line">
                 <p class="title-form">оставьте заявку</p>
-                <form class="header-form" action="">
+                <!-- <form class="header-form" action="">
                     <input required type="text" placeholder="Имя">
                     <input required type="number" placeholder="Телефон">
                     <select name="" id="">
@@ -32,7 +32,9 @@ get_header(); ?>
                         <option value="">Номинал 4000 р.</option>
                     </select>
                     <input type="submit" class="button" value="ЗАПИСАТЬСЯ">
-                </form>
+                </form> -->
+                
+                <?php echo do_shortcode( '[contact-form-7 id="370" title="Подарочные сертификаты"]' ); ?>
                 <p class="text-form">Администратор перезвонит Вам в ближайшее время</p>
                 <span class="politics"> 
                     <?php if(get_field('politics', get_option( 'page_on_front' ))) : ?>

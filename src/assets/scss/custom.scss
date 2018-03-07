@@ -1,3 +1,17 @@
+html, body {
+    font-family: 'Gotham Pro Light', sans-serif;
+}
+
+.wr {
+    margin: 0 auto;
+    max-width: 75rem;
+}
+
+@font-face{
+font-family: Reef;
+src: url('../../../fonts/GothaProLig.woff'), url('../../../fonts/GothaProLig.woff') format('woff');
+}
+
 .mobile-menu .menu .is-active > a {
     background: rgba(0, 0, 0, .2);
 }
@@ -50,7 +64,7 @@
 }
 
 #header-nav {
-    padding-right: 280px;
+    padding-right: 228px;
     position: relative;
 }
 
@@ -68,7 +82,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin-right: 3rem;
+    // margin-right: 3rem;
     height: 44px;
     width: 14rem;
     background: #e62c44;
@@ -524,7 +538,7 @@
 
 .feedback-wrapper form {
     padding-top: 2rem;
-    padding-bottom: 1rem;
+    // padding-bottom: 1rem;
 }
 
 

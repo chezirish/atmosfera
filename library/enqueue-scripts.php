@@ -38,6 +38,8 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
+		// Enqueue fonts
+		// wp_enqueue_style( 'fonts',  get_template_directory_uri() . '/fonts/GothaProLig.woff', array(), null );
 
 		// Deregister the jquery version bundled with WordPress.
 		wp_deregister_script( 'jquery' );

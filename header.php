@@ -41,15 +41,16 @@
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 				</div>
 			</div> -->
-			
-			<div class="top-bar-left" id="header-nav">
-				<?php foundationpress_top_bar_r(); ?>
+			<div class="wr">
+				<div class="top-bar-left" id="header-nav">
+					<?php foundationpress_top_bar_r(); ?>
 
-				
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-				<a href="https://beauty.dikidi.ru/profile/studiya_krasoty_atmosfera_74086/#create-record-by-widget-3297" class="button top-bar-button-sign">Запись онлайн</a>
+					
+					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
+						<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+					<?php endif; ?>
+					<a href="https://beauty.dikidi.ru/profile/studiya_krasoty_atmosfera_74086/#create-record-by-widget-3297" class="button top-bar-button-sign">Запись онлайн</a>
+				</div>
 			</div>
 		</nav>
 
