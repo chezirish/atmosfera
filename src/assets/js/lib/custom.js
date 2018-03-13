@@ -297,11 +297,6 @@ $(function() {
 
 
 
-
-
-
-    
-
     var $grid = $('.grid').masonry({
         // options
         itemSelector: '.grid-item',
@@ -323,6 +318,26 @@ $(function() {
             $(this).find( ".modal" ).css('display', 'none');
         });
     }
+
+
+    var formList = document.getElementsByTagName('form');
+    
+    for(var i=0; i<formList.length; i++){
+        
+        formList[i].addEventListener('submit', function(){
+            // console.log(yaCounter48012926);
+            yaCounter48012926.reachGoal('forma');
+        })
+    }
+    
+    $('a[href*="dikidi"]').each(function() {
+        $(this).on('click', function(){
+            // console.log($(this));
+            yaCounter48012926.reachGoal('button_online');
+        })
+    })
+    
+
 
 })
 
